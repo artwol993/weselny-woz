@@ -5,13 +5,12 @@ import Footer from './component/footer';
 import Body from './component/body';
 
 import './style/App.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function App() {
   return (
     <div className="App">
-     <p>Rent Car</p>
      <Header />
      <Body />
      <Footer />
