@@ -1,0 +1,16 @@
+.languages {
+  list-style: none;
+  display: flex;
+  float: right;
+  color: aliceblue;
+  
+}
+
+li {
+  margin-left: 5px;
+}
+
+NavDropdown.Item {
+  width: 50px;
+  background-color: blue;
+}
