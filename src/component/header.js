@@ -21,14 +21,13 @@ function Header() {
           <Nav.Link href="#cars">Samochody</Nav.Link>
           <Nav.Link href="#news">Aktualności</Nav.Link>
           <Nav.Link href="#contact">Kontakt</Nav.Link>
-            <NavDropdown title="Język" id="nav-dropdown" bg="dark" variant="dark">
+            <NavDropdown title="Język" id="nav-dropdown">
               <NavDropdown.Item eventKey="1.1">PL</NavDropdown.Item>
               <NavDropdown.Item eventKey="1.2">EN</NavDropdown.Item>
               <NavDropdown.Item eventKey="1.3">UA</NavDropdown.Item>
             </NavDropdown>
         </Nav>
         </Navbar.Collapse>
-
     </Container>
     </Navbar>
     </>
