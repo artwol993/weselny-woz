@@ -1,0 +1,12 @@
+.languages {
+  list-style: none;
+  display: flex;
+  float: right;
+  color: aliceblue;
+  
+}
+
+li {
+  margin-left: 5px;
+}
+
