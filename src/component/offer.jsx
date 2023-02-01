@@ -1,44 +1,57 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
-import "../assets/2.jpg"
+import "../style/offer.css"
+import photo1 from "../assets/photo1.png"
+import photo2 from '../assets/photo2.png';
+import photo3 from '../assets/photo3.png';
 
 function Offer() {
   return (
-    <CardGroup className='m-5'>
-    <Card border="info" style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://thenounproject.com/api/private/icons/5469157/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABj2YX4FjBYLLHqU9dQmqENFg2QUliRkGFev5AY6Ty4SCCawu_JbWC42hMzrJU3IfJBp6_jDn2VTqBOL26DOjGDq20kAw%3D%3D" />
-      <Card.Body>
-        <Card.Title>Card title</Card.Title>
-        <Card.Text>
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </Card.Text>
-      </Card.Body>
-    </Card>
-    <Card border="info" style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://static.thenounproject.com/attribution/416360-600.png" />
-      <Card.Body>
-        <Card.Title>Card title</Card.Title>
-        <Card.Text>
-          This card has supporting text below as a natural lead-in to
-          additional content.{' '}
-        </Card.Text>
-      </Card.Body>
-    </Card>
-    <Card border="info" style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://thenounproject.com/api/private/icons/421805/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABj2YX4FjBYLLHqU9dQmqENFg2QUliRkGFev5AY6Ty4SCCawu_JbWC42hMzrJU3IfJBp6_jDn2VTqBOL26DOjGDq20kAw%3D%3D" />
-      <Card.Body>
-        <Card.Title>Card title</Card.Title>
-        <Card.Text>
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This card has even longer content than the
-          first to show that equal height action.
-        </Card.Text>
-      </Card.Body>
-    </Card>
-  </CardGroup>
-);
+    <section id="about-us" className="p-5">
+      <div className="container">
+        <div className="row text-center g-4">
+        <div className="col-md">
+            <div className=" text-dark adv-card">
+              <div className="card-body text-center d-flex flex-column justify-content-center align-items-center">
+                <div className="h1 mb-3">
+                  <img src={photo1} alt="dos"/>
+                </div>
+                <h3 className="card-title mb-3">Flota</h3>
+                <p className="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum in aspernatur accusamus ipsa ea sunt saepe. Deleniti, mollitia beatae fugiat inventore dicta quidem quod non dolorum nam tempore suscipit obcaecati!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md">
+            <div className=" text-dark adv-card">
+              <div className="card-body text-center d-flex flex-column justify-content-center align-items-center">
+                <div className="h1 mb-3">
+                  <img src={photo2} alt="dos"/>
+                </div>
+                <h3 className="card-title mb-3">Zespół</h3>
+                <p className="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam maiores deleniti rerum qui amet repudiandae eaque tempora corporis nostrum, commodi, tempore, nemo eveniet est nesciunt facere molestiae nulla esse dolore.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md">
+            <div className=" text-dark adv-card">
+              <div className="card-body text-center d-flex flex-column justify-content-center align-items-center">
+                <div className="h1 mb-3">
+                  <img src={photo3} alt="dos"/>
+                </div>
+                <h3 className="card-title mb-3">Profesjonalizm</h3>
+                <p className="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cupiditate eos excepturi reiciendis quas molestias totam recusandae quasi architecto, et reprehenderit sed est voluptates ipsum ut similique, neque provident aperiam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Offer
