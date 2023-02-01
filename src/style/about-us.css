@@ -1,5 +1,17 @@
 .container-about-us {
-  padding: 80px;
+
+  height: 400px;
   text-align: center;
-  background-color: aqua;
+  font-size: large;
+  font-family: serif ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .container-about-us {
+    width: 700px!important;
+    height: 400px;
+  }
 }
