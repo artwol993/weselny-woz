@@ -25,7 +25,7 @@ function WelcomeCarousel() {
           className="d-block w-100"
           src="https://images.pexels.com/photos/6260612/pexels-photo-6260612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Third slide"
-          style={{ maxHeight: '700px' }}
+          style={{ maxHeight: '800px' }}
         />
       </Carousel.Item>
     </Carousel>
