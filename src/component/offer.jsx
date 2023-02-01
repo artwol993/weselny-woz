@@ -1,19 +1,19 @@
 import React from 'react'
 import "../style/offer.css"
-import photo1 from "../assets/photo1.png"
-import photo2 from '../assets/photo2.png';
-import photo3 from '../assets/photo3.png';
+import offerCar from "../assets/offerCar.png"
+import offerTeam from '../assets/offerTeam.png';
+import offerProffesional from '../assets/offerProffesional.png';
 
 function Offer() {
   return (
-    <section id="about-us" className="p-5">
+    <section id="about-us" className="offer-container p-5">
       <div className="container">
         <div className="row text-center g-4">
         <div className="col-md">
-            <div className=" text-dark adv-card">
+            <div className=" text-white adv-card">
               <div className="card-body text-center d-flex flex-column justify-content-center align-items-center">
-                <div className="h1 mb-3">
-                  <img className='offer-icon' src={photo1} alt="dos"/>
+                <div className="mb-2 box-circle">
+                  <img className='offer-icon' src={offerCar} alt="dos"/>
                 </div>
                 <h3 className="card-title mb-3">Flota</h3>
                 <p className="card-text">
@@ -23,10 +23,10 @@ function Offer() {
             </div>
           </div>
           <div className="col-md">
-            <div className=" text-dark adv-card">
+            <div className=" text-white adv-card">
               <div className="card-body text-center d-flex flex-column justify-content-center align-items-center">
-                <div className="h1 mb-3">
-                  <img className='offer-icon' src={photo2} alt="dos"/>
+                <div className="mb-2 box-circle">
+                  <img className='offer-icon' src={offerTeam} alt="dos"/>
                 </div>
                 <h3 className="card-title mb-3">Zespół</h3>
                 <p className="card-text">
@@ -36,10 +36,10 @@ function Offer() {
             </div>
           </div>
           <div className="col-md">
-            <div className=" text-dark adv-card">
+            <div className=" text-white adv-card">
               <div className="card-body text-center d-flex flex-column justify-content-center align-items-center">
-                <div className="h1 mb-3">
-                  <img className='offer-icon' src={photo3} alt="dos"/>
+                <div className="mb-2 box-circle">
+                  <img className='offer-icon' src={offerProffesional} alt="dos"/>
                 </div>
                 <h3 className="card-title mb-3">Profesjonalizm</h3>
                 <p className="card-text">
