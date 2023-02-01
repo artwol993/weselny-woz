@@ -6,6 +6,7 @@ import wc3 from "../assets/wc3.png"
 
 function WelcomeCarousel() {
   return (
+    <section id ="welcome">
     <Carousel variant="dark" fade>
       <Carousel.Item>
         <img
@@ -32,6 +33,7 @@ function WelcomeCarousel() {
         />
       </Carousel.Item>
     </Carousel>
+    </section>
   );
 }
 
