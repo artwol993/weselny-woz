@@ -3,6 +3,7 @@ import AboutUs from './about-us'
 import WelcomeCarousel from './welcome-carousel'
 import Offer from './offer'
 import Cars from './cars'
+import Contact from './contact'
 
 function Body() {
   return (
@@ -11,6 +12,7 @@ function Body() {
       <AboutUs />
       <Offer />
       <Cars />
+      <Contact />
     </div>
   )
 }

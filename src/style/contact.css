@@ -1,0 +1,17 @@
+.container-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+
+@media only screen and (min-width: 992px) {
+  .container-form {
+    width: 700px!important;
+  }
+}
