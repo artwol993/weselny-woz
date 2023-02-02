@@ -27,7 +27,7 @@ function CarsGallery() {
                   <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                      <h3>{price}</h3>
+                      <p>{price}</p>
                       <p>{description}</p>
                     </Card.Text>
                     <Button variant="secondary">Zarezerwuj</Button>{''}
