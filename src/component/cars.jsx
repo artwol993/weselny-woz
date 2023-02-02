@@ -20,10 +20,14 @@ function CarsGallery() {
           items.map((elem) => {
             const {id, name, image, price, description} = elem;
 
+            const bigImg = (image) => {
+              alert(image)
+            }
+
             return (
               <Col>
                 <Card>
-                  <Card.Img className="box-photo" variant="top" src={image} alt={name} />
+                  <Card.Img className="box-photo" variant="top" src={image} alt={name} onClick={()=>bigImg(elem.image)}/>
                   <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
