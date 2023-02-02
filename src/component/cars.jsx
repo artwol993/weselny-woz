@@ -1,33 +1,45 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "../style/cars.css"
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
-import cars1 from "../assets/cars1.png"
+import Cars from './cars-data';
 
-function Cars() {
+
+function CarsGallery() {
+
+  const [items, setItems] = useState(Cars);
+
   return (
-    <section id="cars" className="container-cars">
-      <Row xs={1}  sm={2} md={3} lg={4} xl={5} className="g-4">
-        {Array.from({ length: 10 }).map((_, idx) => (
-          <Col>
-            <Card>
-              <Card.Img className="box-photo" variant="top" src={cars1} />
-                <Card.Body>
-                  <Card.Title>Car title</Card.Title>
-                  <Card.Text>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, voluptatibus? Nemo tenetur quam, tempore magnam molestiae voluptatibus beatae aspernatur cum.
-                  </Card.Text>
-                  <Button variant="secondary">Zarezerwuj</Button>{''}
-                </Card.Body>
-              </Card>
-          </Col>
+    <>
+      <section id="cars" className="container-cars">
+        <Row xs={1}  sm={2} md={3} lg={4} xl={5} className="g-4">
+        {Array.from({ length: 1}).map(() => (
+
+          items.map((elem) => {
+            const {id, name, image, price, description} = elem;
+
+            return (
+              <Col>
+                <Card>
+                  <Card.Img className="box-photo" variant="top" src={image} alt={name} />
+                  <Card.Body>
+                    <Card.Title>{name}</Card.Title>
+                    <Card.Text>
+                      <h3>{price}</h3>
+                      <p>{description}</p>
+                    </Card.Text>
+                    <Button variant="secondary">Zarezerwuj</Button>{''}
+                  </Card.Body>
+                </Card>
+              </Col>
+          )})   
         ))}
-      </Row>
-    </section>
- 
+        </Row>
+      </section>
+    </>
   )
 }
 
-export default Cars
+export default CarsGallery;
