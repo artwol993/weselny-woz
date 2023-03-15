@@ -3,8 +3,6 @@ import "../style/header.css";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown'
-
 
 function Header() {
   return (
@@ -21,11 +19,6 @@ function Header() {
           <Nav.Link href="#cars">Samochody</Nav.Link>
           <Nav.Link href="#news">Aktualności</Nav.Link>
           <Nav.Link href="#contact">Kontakt</Nav.Link>
-            <NavDropdown title="Język" id="nav-dropdown">
-              <NavDropdown.Item eventKey="1.1">PL</NavDropdown.Item>
-              <NavDropdown.Item eventKey="1.2">EN</NavDropdown.Item>
-              <NavDropdown.Item eventKey="1.3">UA</NavDropdown.Item>
-            </NavDropdown>
         </Nav>
         </Navbar.Collapse>
     </Container>
