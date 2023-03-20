@@ -1,40 +1,34 @@
-import Carousel from 'react-bootstrap/Carousel';
+import React, { useState  } from "react";
+import Carousel from "react-bootstrap/Carousel";
 import "../style/welcome-carousel.css";
-import wc1 from "../assets/wc1.jpg";
-import wc2 from "../assets/wc2.jpg";
-import wc3 from "../assets/wc3.png"
+import Cars from "./cars-data";
 
 function WelcomeCarousel() {
+    const [index, setIndex] = useState(0);
+  
+    const handleSelect = (selectedIndex) => {
+      setIndex(selectedIndex);
+    };
+
+
+
   return (
-    <section id ="welcome">
-    <Carousel variant="dark" fade>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 wc-image"
-          src={wc1}
-          alt="First slide"
-          style={{ maxHeight: '800px' }}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 wc-image"
-          src={wc2}
-          alt="Second slide"
-          style={{ maxHeight: '800px' }}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 wc-image"
-          src={wc3}
-          alt="Third slide"
-          style={{ maxHeight: '800px' }}
-        />
-      </Carousel.Item>
+    <section id="welcome" className="welcome-carousel">
+       <Carousel activeIndex={index} onSelect={handleSelect}>
+      {Cars.map((car) => (
+        <Carousel.Item key={car.id}>
+          <img
+           className="d-block w-100 wc-image"
+            src={car.image}
+            alt={car.name}
+          />
+          <Carousel.Caption>
+            <h3>{car.name}</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
     </Carousel>
     </section>
   );
 }
-
 export default WelcomeCarousel;
