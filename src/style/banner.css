@@ -1,0 +1,23 @@
+.banner-container {
+  height: 300px;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(202,226,255,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.banner-p {
+  color: white;
+  font-size: 35px;
+}
+
+.banner-img {
+  margin-left: 10px ;
+}
