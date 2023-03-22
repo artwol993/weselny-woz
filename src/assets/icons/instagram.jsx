@@ -5,7 +5,7 @@ export const Instagram = () => (
     height="3em"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="#9A208C"
+    stroke="#9a205f"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"

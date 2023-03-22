@@ -4,7 +4,7 @@ import "../style/banner.css";
 
 function Banner() {
   return (
-    <section id="banner">
+    <section id="banner" className="banner-section">
       <a href="https://www.instagram.com">
         <div className="banner-container">
           <p className="banner-p">Sprawdź nasze promocje</p>
