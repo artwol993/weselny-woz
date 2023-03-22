@@ -21,7 +21,7 @@
 }
 
 .banner-container:hover {
-  border: dashed 1em white;
+  border: dashed 1em #ffff;
 }
 
 .banner-link {
@@ -32,7 +32,7 @@
 }
 
 .banner-p {
-  color: #9a205f;
+  color: #ffff;
   font-size: 2.5em;
   margin-right: 0.2em;
 }
