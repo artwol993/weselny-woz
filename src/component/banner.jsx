@@ -7,8 +7,9 @@ function Banner() {
     <section id="banner" className="banner-section">
       <a href="https://www.instagram.com">
         <div className="banner-container">
-          <p className="banner-p">Sprawdź nasze promocje</p>
-          <Instagram />
+          <span className="banner-p">
+            Sprawdź nasze promocje <Instagram />
+          </span>
         </div>
       </a>
     </section>
