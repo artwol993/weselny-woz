@@ -1,5 +1,5 @@
 .banner-container {
-  height: 300px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,10 +26,28 @@
   justify-content: center;
   align-items: center;
   padding: 10rem;
+  
 }
 
 .banner-p {
   color: #ffff;
   font-size: 2.5em;
   margin-right: 0.2em;
+  animation-name: stretch;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
 }
+
+@keyframes stretch {
+  0% {
+    transform: scale(1.1);
+  }
+
+}
+
+
