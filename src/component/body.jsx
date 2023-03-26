@@ -3,7 +3,7 @@ import AboutUs from "./about-us";
 import Banner from "./banner";
 import WelcomeCarousel from "./welcome-carousel";
 import Offer from "./offer";
-import Cars from "./cars";
+import Gallery from "./gallery";
 import Contact from "./contact";
 
 function Body() {
@@ -13,7 +13,7 @@ function Body() {
       <AboutUs />
       <Banner />
       <Offer />
-      <Cars />
+      <Gallery />
       <Contact />
     </div>
   );
