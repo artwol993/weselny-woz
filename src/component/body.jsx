@@ -5,6 +5,7 @@ import WelcomeCarousel from "./welcome-carousel";
 import Offer from "./offer";
 import Cars from "./cars";
 import Contact from "./contact";
+import Instruction from "./instruction";
 
 function Body() {
   return (
@@ -13,6 +14,7 @@ function Body() {
       <AboutUs />
       <Banner />
       <Offer />
+      <Instruction />
       <Cars />
       <Contact />
     </div>
