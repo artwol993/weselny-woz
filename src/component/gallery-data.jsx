@@ -2,7 +2,6 @@ const Cars = [
   {
     id: 1,
     image: "images/car1.jpg",
-    gallery: ["images/wc1.jpg", "images/wc2.jpg"],
     name: "car1",
     category: "sport",
     price: "1100pln",
