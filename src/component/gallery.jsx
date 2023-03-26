@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Cars from "./cars-data";
+import Cars from "./gallery-data";
 import "../style/gallery.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";

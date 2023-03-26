@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "../style/welcome-carousel.css";
-import Cars from "./cars-data";
+import Cars from "./gallery-data";
 
 function WelcomeCarousel() {
   const [index, setIndex] = useState(0);
