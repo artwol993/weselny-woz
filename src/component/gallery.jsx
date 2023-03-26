@@ -4,13 +4,21 @@ import "../style/gallery.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
+import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 
 function Gallery() {
   const [index, setIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
+  };
+
+  const handleImageClick = (imageUrl) => {
+    setSelectedImage(imageUrl);
+    setShowModal(true);
   };
 
   return (
@@ -33,6 +41,7 @@ function Gallery() {
                 variant="top"
                 src={car.image}
                 alt={car.name}
+                onClick={() => handleImageClick(car.image)}
               />
               <Card.Body>
                 <Card.Title>{car.name}</Card.Title>
@@ -47,6 +56,12 @@ function Gallery() {
           </Col>
         ))}
       </Row>
+
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Body>
+          <img src={selectedImage} alt="Selected car" className="img-fluid" />
+        </Modal.Body>
+      </Modal>
     </section>
   );
 }
