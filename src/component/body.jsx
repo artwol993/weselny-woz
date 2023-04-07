@@ -4,6 +4,7 @@ import Banner from "./banner";
 import WelcomeCarousel from "./welcome-carousel";
 import Offer from "./offer";
 import Gallery from "./gallery";
+import PhotoBlock from "./photo-block";
 import Contact from "./contact";
 
 function Body() {
@@ -14,6 +15,7 @@ function Body() {
       <Banner />
       <Offer />
       <Gallery />
+      <PhotoBlock />
       <Contact />
     </div>
   );
