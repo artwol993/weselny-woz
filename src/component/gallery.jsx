@@ -3,6 +3,7 @@ import Cars from "./gallery-data";
 import "../style/gallery.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
@@ -16,8 +17,8 @@ function Gallery() {
     setIndex(selectedIndex);
   };
 
-  const handleImageClick = (imageUrl) => {
-    setSelectedImage(imageUrl);
+  const handleImageClick = (imageUrl, gallery, name, description) => {
+    setSelectedImage({ imageUrl, gallery, name, description });
     setShowModal(true);
   };
 
@@ -41,7 +42,14 @@ function Gallery() {
                 variant="top"
                 src={car.image}
                 alt={car.name}
-                onClick={() => handleImageClick(car.image)}
+                onClick={() =>
+                  handleImageClick(
+                    car.image,
+                    car.gallery,
+                    car.name,
+                    car.description
+                  )
+                }
               />
               <Card.Body>
                 <Card.Title>{car.name}</Card.Title>
@@ -57,9 +65,34 @@ function Gallery() {
         ))}
       </Row>
 
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal show={showModal} onHide={() => setShowModal(false)} size="lg">
         <Modal.Body>
-          <img src={selectedImage} alt="Selected car" className="img-fluid" />
+          <Carousel
+            activeIndex={index}
+            onSelect={handleSelect}
+            className="modal-carousel"
+          >
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={selectedImage.imageUrl}
+                alt="Selected"
+              />
+            </Carousel.Item>
+            {selectedImage.gallery?.map((image, index) => (
+              <Carousel.Item key={index}>
+                <img
+                  className="d-block w-100"
+                  src={image}
+                  alt={`Gallery ${index}`}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+          <div className="modal-text">
+            <h4>{selectedImage.name}</h4>
+            <p>{selectedImage.description}</p>
+          </div>
         </Modal.Body>
       </Modal>
     </section>
