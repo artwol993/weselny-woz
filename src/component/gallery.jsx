@@ -12,13 +12,15 @@ function Gallery() {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
+  const [selectedCar, setSelectedCar] = useState(null);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
 
-  const handleImageClick = (imageUrl, gallery) => {
+  const handleImageClick = (car, imageUrl, gallery) => {
     setSelectedImage({ imageUrl, gallery });
+    setSelectedCar(car);
     setShowModal(true);
   };
 
@@ -35,14 +37,14 @@ function Gallery() {
         className="g-4"
       >
         {Cars.map((car) => (
-          <Col key={car.id}>
-            <Card>
+          <Col>
+            <Card key={car.id}>
               <Card.Img
                 className="box-photo"
                 variant="top"
                 src={car.image}
                 alt={car.name}
-                onClick={() => handleImageClick(car.image, car.gallery)}
+                onClick={() => handleImageClick(car, car.image, car.gallery)}
               />
               <Card.Body>
                 <Card.Title>{car.name}</Card.Title>
@@ -59,8 +61,11 @@ function Gallery() {
       </Row>
 
       <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>{selectedCar?.name}</Modal.Title>
+        </Modal.Header>
         <Modal.Body>
-          <Carousel activeIndex={index} onSelect={handleSelect}>
+          <Carousel>
             <Carousel.Item>
               <img
                 src={selectedImage.imageUrl}
@@ -78,6 +83,10 @@ function Gallery() {
               </Carousel.Item>
             ))}
           </Carousel>
+          <div className="description">
+            <p>{selectedCar?.description}</p>
+            <p>{selectedCar?.price}</p>
+          </div>
         </Modal.Body>
       </Modal>
     </section>
