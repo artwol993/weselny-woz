@@ -16,8 +16,8 @@ function Gallery() {
     setIndex(selectedIndex);
   };
 
-  const handleImageClick = (imageUrl) => {
-    setSelectedImage(imageUrl);
+  const handleImageClick = (imageUrl, gallery) => {
+    setSelectedImage({ imageUrl, gallery });
     setShowModal(true);
   };
 
@@ -41,7 +41,7 @@ function Gallery() {
                 variant="top"
                 src={car.image}
                 alt={car.name}
-                onClick={() => handleImageClick(car.image)}
+                onClick={() => handleImageClick(car.image, car.gallery)}
               />
               <Card.Body>
                 <Card.Title>{car.name}</Card.Title>
@@ -59,7 +59,21 @@ function Gallery() {
 
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Body>
-          <img src={selectedImage} alt="Selected car" className="img-fluid" />
+          <img
+            src={selectedImage.imageUrl}
+            alt="Selected"
+            className="img-fluid"
+          />
+          <div className="gallery">
+            {selectedImage.gallery?.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Gallery ${index}`}
+                className="img-fluid"
+              />
+            ))}
+          </div>
         </Modal.Body>
       </Modal>
     </section>
