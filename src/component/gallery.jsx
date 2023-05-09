@@ -12,15 +12,13 @@ function Gallery() {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
-  const [selectedCar, setSelectedCar] = useState(null);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
 
-  const handleImageClick = (car, imageUrl, gallery) => {
-    setSelectedImage({ imageUrl, gallery });
-    setSelectedCar(car);
+  const handleImageClick = (imageUrl, gallery, name, description) => {
+    setSelectedImage({ imageUrl, gallery, name, description });
     setShowModal(true);
   };
 
@@ -44,7 +42,14 @@ function Gallery() {
                 variant="top"
                 src={car.image}
                 alt={car.name}
-                onClick={() => handleImageClick(car, car.image, car.gallery)}
+                onClick={() =>
+                  handleImageClick(
+                    car.image,
+                    car.gallery,
+                    car.name,
+                    car.description
+                  )
+                }
               />
               <Card.Body>
                 <Card.Title>{car.name}</Card.Title>
@@ -60,32 +65,33 @@ function Gallery() {
         ))}
       </Row>
 
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>{selectedCar?.name}</Modal.Title>
-        </Modal.Header>
+      <Modal show={showModal} onHide={() => setShowModal(false)} size="lg">
         <Modal.Body>
-          <Carousel>
+          <Carousel
+            activeIndex={index}
+            onSelect={handleSelect}
+            className="modal-carousel"
+          >
             <Carousel.Item>
               <img
+                className="d-block w-100"
                 src={selectedImage.imageUrl}
                 alt="Selected"
-                className="img-fluid"
               />
             </Carousel.Item>
             {selectedImage.gallery?.map((image, index) => (
               <Carousel.Item key={index}>
                 <img
+                  className="d-block w-100"
                   src={image}
                   alt={`Gallery ${index}`}
-                  className="img-fluid"
                 />
               </Carousel.Item>
             ))}
           </Carousel>
-          <div className="description">
-            <p>{selectedCar?.description}</p>
-            <p>{selectedCar?.price}</p>
+          <div className="modal-text">
+            <h4>{selectedImage.name}</h4>
+            <p>{selectedImage.description}</p>
           </div>
         </Modal.Body>
       </Modal>
