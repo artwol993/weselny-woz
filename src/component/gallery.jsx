@@ -3,6 +3,7 @@ import Cars from "./gallery-data";
 import "../style/gallery.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
@@ -34,8 +35,8 @@ function Gallery() {
         className="g-4"
       >
         {Cars.map((car) => (
-          <Col>
-            <Card key={car.id}>
+          <Col key={car.id}>
+            <Card>
               <Card.Img
                 className="box-photo"
                 variant="top"
@@ -59,21 +60,24 @@ function Gallery() {
 
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Body>
-          <img
-            src={selectedImage.imageUrl}
-            alt="Selected"
-            className="img-fluid"
-          />
-          <div className="gallery">
-            {selectedImage.gallery?.map((image, index) => (
+          <Carousel activeIndex={index} onSelect={handleSelect}>
+            <Carousel.Item>
               <img
-                key={index}
-                src={image}
-                alt={`Gallery ${index}`}
+                src={selectedImage.imageUrl}
+                alt="Selected"
                 className="img-fluid"
               />
+            </Carousel.Item>
+            {selectedImage.gallery?.map((image, index) => (
+              <Carousel.Item key={index}>
+                <img
+                  src={image}
+                  alt={`Gallery ${index}`}
+                  className="img-fluid"
+                />
+              </Carousel.Item>
             ))}
-          </div>
+          </Carousel>
         </Modal.Body>
       </Modal>
     </section>
