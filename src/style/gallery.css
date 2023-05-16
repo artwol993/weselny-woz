@@ -3,3 +3,7 @@
   padding-inline: 50px;
 }
 
+.box-photo:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
