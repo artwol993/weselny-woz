@@ -3,3 +3,22 @@
   padding-inline: 50px;
 }
 
+.box-photo:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.modal-dialog {
+  margin-top: 5vh;
+}
+
+.modal-content {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-body {
+  overflow-y: auto;
+}

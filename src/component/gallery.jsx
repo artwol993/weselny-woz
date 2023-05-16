@@ -94,6 +94,9 @@ function Gallery() {
             <p>{selectedImage.description}</p>
           </div>
         </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary">Zarezerwuj</Button>
+        </Modal.Footer>
       </Modal>
     </section>
   );
