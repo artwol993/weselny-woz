@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
+import Cars from "./gallery-data";
 
 function Contact() {
   return (
@@ -20,9 +21,9 @@ function Contact() {
                   <Form.Group as={Col} controlId="formGridState">
                     <FloatingLabel>Auto</FloatingLabel>
                     <Form.Select defaultValue="Choose...">
-                      <option>Car1</option>
-                      <option>Car2</option>
-                      <option>Car3</option>
+                      {Cars.map((car) => (
+                        <option key={car.id}>{car.name}</option>
+                      ))}
                     </Form.Select>
                   </Form.Group>
                   <Form.Group as={Col} controlId="formGridState">
