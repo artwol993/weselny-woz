@@ -30,11 +30,17 @@ function Contact() {
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridState">
                     <FloatingLabel>Auto</FloatingLabel>
-                    <Form.Select defaultValue="Choose...">
+                    <Form.Select
+                      {...register("car", { required: "Please select a car" })}
+                    >
+                      <option value="">Wybierz auto...</option>
                       {Cars.map((car) => (
-                        <option key={car.id}>{car.name}</option>
+                        <option key={car.id} value={car.name}>
+                          {car.name}
+                        </option>
                       ))}
                     </Form.Select>
+                    {errors.car && <p>{errors.car.message}</p>}
                   </Form.Group>
 
                   <Form.Group as={Col} controlId="formGridState">
@@ -84,7 +90,7 @@ function Contact() {
                         required: "Podaj imię",
                         pattern: {
                           value: /^[A-Za-z ]+$/,
-                          message: "Invalid name",
+                          message: "Błędne imie",
                         },
                       })}
                     />
@@ -100,7 +106,7 @@ function Contact() {
                         required: "Podaj Email",
                         pattern: {
                           value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                          message: "Invalid email address",
+                          message: "Błędny email",
                         },
                       })}
                     />
@@ -130,11 +136,11 @@ function Contact() {
                 >
                   <Form.Control
                     as="textarea"
-                    placeholder="Leave a comment here"
+                    placeholder="Zostaw komentarz"
                     style={{ height: "200px" }}
                     {...register("comment", {
                       maxLength: {
-                        value: 10,
+                        value: 300,
                         message: "Przekroczyłeś maksymalną ilość znaków",
                       },
                     })}
