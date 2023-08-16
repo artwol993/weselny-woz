@@ -22,3 +22,10 @@
 .wc-image {
   width: auto;
 }
+
+.carousel-control-prev:hover {
+background-color: rgba(240, 248, 255, 0.564) !important
+}
+.carousel-control-next:hover {
+  background-color: rgba(240, 248, 255, 0.564) !important
+  }

@@ -1,20 +1,24 @@
-import React from 'react'
-import AboutUs from './about-us'
-import WelcomeCarousel from './welcome-carousel'
-import Offer from './offer'
-import Cars from './cars'
-import Contact from './contact'
+import React from "react";
+import AboutUs from "./about-us";
+import Banner from "./banner";
+import WelcomeCarousel from "./welcome-carousel";
+import Offer from "./offer";
+import Gallery from "./gallery";
+import PhotoBlock from "./photo-block";
+import Contact from "./contact";
 
 function Body() {
   return (
     <div>
       <WelcomeCarousel />
       <AboutUs />
+      <Banner />
       <Offer />
-      <Cars />
+      <Gallery />
+      <PhotoBlock />
       <Contact />
     </div>
-  )
+  );
 }
 
-export default Body
+export default Body;
