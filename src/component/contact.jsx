@@ -31,7 +31,7 @@ function Contact() {
                   <Form.Group as={Col} controlId="formGridState">
                     <FloatingLabel>Auto</FloatingLabel>
                     <Form.Select
-                      {...register("car", { required: "Please select a car" })}
+                      {...register("car", { required: "Wybierz auto" })}
                     >
                       <option value="">Wybierz auto...</option>
                       {Cars.map((car) => (
