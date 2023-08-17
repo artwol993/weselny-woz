@@ -2,7 +2,7 @@ import React from "react";
 import AboutUs from "./about-us";
 import Banner from "./banner";
 import WelcomeCarousel from "./welcome-carousel";
-import Offer from "./offer";
+import Quality from "./quality";
 import Gallery from "./gallery";
 import PhotoBlock from "./photo-block";
 import Contact from "./contact";
@@ -13,7 +13,7 @@ function Body() {
       <WelcomeCarousel />
       <AboutUs />
       <Banner />
-      <Offer />
+      <Quality />
       <Gallery />
       <PhotoBlock />
       <Contact />

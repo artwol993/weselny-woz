@@ -1,5 +1,5 @@
-.offer-container {
-  background-image: url("../assets/offerTheme.jpg");
+.quality-container {
+  background-image: url("../assets/qualityTheme.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -15,7 +15,7 @@
   align-items: center;
   margin-bottom: 10px;
 }
-.offer-icon {
+.quality-icon {
   width: 150px;
   height: 150px;
 }
