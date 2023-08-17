@@ -19,12 +19,14 @@ function Quality() {
                 <div className="mb-2 box-circle">
                   <img className="quality-icon" src={qualityCar} alt="dos" />
                 </div>
-                <Card.Title className=" mb-3">Flota</Card.Title>
+                <Card.Title className=" mb-3">
+                  Luksus na każdą okazję
+                </Card.Title>
                 <Card.Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatum in aspernatur accusamus ipsa ea sunt saepe.
-                  Deleniti, mollitia beatae fugiat inventore dicta quidem quod
-                  non dolorum nam tempore suscipit obcaecati!
+                  Wybieraj spośród szerokiej gamy pojazdów, od klasycznych
+                  modeli po najnowsze limuzyny. Każdy samochód jest gwarancją
+                  komfortu i elegancji, idealnie wpisując się w wyjątkowy
+                  charakter tego ważnego dnia.
                 </Card.Text>
               </Card.Body>
             </div>
@@ -35,12 +37,13 @@ function Quality() {
                 <div className="mb-2 box-circle">
                   <img className="quality-icon" src={qualityTeam} alt="dos" />
                 </div>
-                <Card.Title className=" mb-3">Zespół</Card.Title>
+                <Card.Title className=" mb-3">Zespół pełen pasji</Card.Title>
                 <Card.Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatum in aspernatur accusamus ipsa ea sunt saepe.
-                  Deleniti, mollitia beatae fugiat inventore dicta quidem quod
-                  non dolorum nam tempore suscipit obcaecati!
+                  Choć nasza firma powstała w 2023 roku, nasi kierowcy i zespół
+                  mają lata doświadczenia w branży transportowej i weselnej.
+                  Dbamy o każdy detal, by Twój wyjątkowy dzień był doskonały. Z
+                  nami możesz być pewien, że każdy moment zostanie zaplanowany i
+                  zrealizowany z pasją.
                 </Card.Text>
               </Card.Body>
             </div>
@@ -55,12 +58,16 @@ function Quality() {
                     alt="dos"
                   />
                 </div>
-                <Card.Title className=" mb-3">Profesjonalizm</Card.Title>
+                <Card.Title className=" mb-3">
+                  Perfekcja w każdym szczególe
+                </Card.Title>
                 <Card.Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatum in aspernatur accusamus ipsa ea sunt saepe.
-                  Deleniti, mollitia beatae fugiat inventore dicta quidem quod
-                  non dolorum nam tempore suscipit obcaecati!
+                  Od momentu rezerwacji aż po zakończenie usługi, dbamy o
+                  najwyższe standardy jakości. Nasza flota składa się z
+                  najlepiej utrzymanych luksusowych samochodów, a nasi kierowcy
+                  są szkoleni, by zapewnić najwyższy poziom bezpieczeństwa i
+                  komfortu podczas jazdy. Wybierając "Weselny Wóz", wybierasz
+                  gwarancję niezawodności.
                 </Card.Text>
               </Card.Body>
             </div>
