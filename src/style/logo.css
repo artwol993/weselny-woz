@@ -1,0 +1,16 @@
+.box {
+  background-color: #012f70;
+  padding: 15px;
+  border-radius: 5%;
+  width: fit-content;
+}
+
+.logo-icon {
+  height: auto;
+}
+
+.card-title {
+  color: #FFFFFF;
+  font-size: 10px;
+  font-family: 'DM Serif Display', serif;
+}
