@@ -1,0 +1,17 @@
+.box {
+  background-color: #012f70;
+  padding: 25px;
+  border-radius: 5%;
+  width: fit-content;
+}
+
+.logo-icon {
+  fill: #CBB26B;  /* Ustawienie koloru dla SVG */
+  height: auto;
+}
+
+.card-title {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-family: 'DM Serif Display', serif;
+}
