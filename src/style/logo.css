@@ -1,6 +1,6 @@
 .box {
   background-color: #012f70;
-  padding: 25px;
+  padding: 15px;
   border-radius: 5%;
   width: fit-content;
 }
@@ -12,6 +12,6 @@
 
 .card-title {
   color: #FFFFFF;
-  font-size: 12px;
+  font-size: 10px;
   font-family: 'DM Serif Display', serif;
 }
