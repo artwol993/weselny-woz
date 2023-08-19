@@ -7,7 +7,7 @@ function LogoIcon(props) {
       xmlns="http://www.w3.org/2000/svg"
       width="60px"
       viewBox="0 0 719 497"
-      fill="#CBB26B"
+      fill="#FFFFF"
       preserveAspectRatio="xMidYMid meet"
       {...props}
     >
