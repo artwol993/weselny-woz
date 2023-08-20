@@ -1,12 +1,25 @@
-.languages {
-  list-style: none;
-  display: flex;
-  float: right;
-  color: aliceblue;
-  
+.navbar {
+  background-color: #ffff;
 }
 
-li {
-  margin-left: 5px;
+.nav-link {
+  color: black!important;
+  font-family: 'DM Serif Display', serif;
+  border-bottom: 2px solid #ffff;
+  transition: font-weight 0.3s ease, border-bottom 0.3s ease;
 }
 
+.nav-link:hover{
+  font-weight: 400;
+  border-bottom: 2px solid #012f70;
+}
+
+.navbar-collapse {
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-collapse .nav-link {
+  margin: 5px 20px;
+
+}

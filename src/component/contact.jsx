@@ -21,7 +21,7 @@ function Contact() {
   };
   return (
     <>
-      <section>
+      <section id="contact">
         <Container className="my-5 ">
           <Form onSubmit={handleSubmit(onSubmit)}>
             <div className="container-contact">

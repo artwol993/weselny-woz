@@ -22,3 +22,8 @@
 .modal-body {
   overflow-y: auto;
 }
+
+button {
+  font-family: 'DM Serif Display', serif!important;
+  background-color: #012f70!important;
+}

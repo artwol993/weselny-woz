@@ -8,20 +8,20 @@ import Logo from "./logo";
 function Header() {
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar expand="lg" className="navbar">
         <Container>
           <Navbar.Brand href="#home">
             <Logo />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
               <Nav.Link href="#home">Witaj</Nav.Link>
               <Nav.Link href="#about-us">O nas</Nav.Link>
-              <Nav.Link href="#offer">Oferta</Nav.Link>
-              <Nav.Link href="#cars">Samochody</Nav.Link>
-              <Nav.Link href="#news">Aktualności</Nav.Link>
-              <Nav.Link href="#contact">Kontakt</Nav.Link>
+              <Nav.Link href="#quality">Oferta</Nav.Link>
+              <Nav.Link href="#terms">Warunki</Nav.Link>
+              <Nav.Link href="#gallery">Galeria Aut</Nav.Link>
+              <Nav.Link href="#contact">Wycena</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

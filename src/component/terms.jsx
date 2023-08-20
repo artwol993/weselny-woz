@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 
 function Terms() {
   return (
-    <section id="Terms" className="terms-container p-5">
+    <section id="terms" className="terms-container p-5">
       <Container>
         <h2 className="terms-title text-center mb-2">
           Podstawowe warunki usługi
@@ -26,7 +26,7 @@ function Terms() {
         </div>
         <div className="terms-item">
           <p class="h5">Elastyczny zasięg</p>
-          <p> Obsługujemy tereny w promieniu aż 300 km od Łukowa.</p>
+          <p> Obsługujemy tereny w promieniu aż 150 km od Łukowa.</p>
         </div>
         <div className="terms-item">
           <p class="h5">Personalizacja</p>
