@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 
-function Gallery() {
+function Gallery({ onSelectCar }) {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -19,7 +19,25 @@ function Gallery() {
 
   const handleImageClick = (imageUrl, gallery, name, description) => {
     setSelectedImage({ imageUrl, gallery, name, description });
+
+    onSelectCar(name);
+
     setShowModal(true);
+  };
+
+  const handleSelectCar = (carName) => {
+    onSelectCar(carName);
+    setShowModal(false);
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      window.scrollTo({
+        top: contactSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -57,7 +75,15 @@ function Gallery() {
                   <p>{car.price}</p>
                   <p>{car.description}</p>
                 </Card.Text>
-                <Button variant="secondary">Zarezerwuj</Button>
+                <Button
+                  variant="secondary"
+                  onClick={() => {
+                    handleSelectCar(car.name);
+                    scrollToContact();
+                  }}
+                >
+                  Zarezerwuj
+                </Button>
                 {""}
               </Card.Body>
             </Card>
@@ -95,7 +121,16 @@ function Gallery() {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary">Zarezerwuj</Button>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              handleSelectCar(selectedImage.name);
+              scrollToContact();
+              setShowModal(false);
+            }}
+          >
+            Zarezerwuj
+          </Button>
         </Modal.Footer>
       </Modal>
     </section>

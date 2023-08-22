@@ -9,6 +9,8 @@ import PhotoBlock from "./photo-block";
 import Contact from "./contact";
 
 function Body() {
+  const [selectedCar, setSelectedCar] = React.useState(null);
+
   return (
     <div>
       <WelcomeCarousel />
@@ -16,9 +18,9 @@ function Body() {
       <Banner />
       <Quality />
       <Terms />
-      <Gallery />
+      <Gallery onSelectCar={setSelectedCar} />
       <PhotoBlock />
-      <Contact />
+      <Contact selectedCar={selectedCar} />
     </div>
   );
 }

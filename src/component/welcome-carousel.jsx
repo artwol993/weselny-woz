@@ -11,7 +11,7 @@ function WelcomeCarousel() {
   };
 
   return (
-    <section id="welcome" className="welcome-carousel">
+    <section id="home" className="welcome-carousel">
       <Carousel activeIndex={index} onSelect={handleSelect}>
         {WelcomeCars.map((car) => (
           <Carousel.Item key={car.id}>

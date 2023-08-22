@@ -9,7 +9,7 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
 import Cars from "./gallery-data";
 
-function Contact() {
+function Contact({ selectedCar }) {
   const {
     register,
     handleSubmit,
@@ -21,7 +21,7 @@ function Contact() {
   };
   return (
     <>
-      <section>
+      <section id="contact">
         <Container className="my-5 ">
           <Form onSubmit={handleSubmit(onSubmit)}>
             <div className="container-contact">
@@ -32,6 +32,7 @@ function Contact() {
                     <FloatingLabel>Auto</FloatingLabel>
                     <Form.Select
                       {...register("car", { required: "Wybierz auto" })}
+                      value={selectedCar || ""}
                     >
                       <option value="">Wybierz auto...</option>
                       {Cars.map((car) => (
