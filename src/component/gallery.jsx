@@ -29,6 +29,16 @@ function Gallery({ onSelectCar }) {
     onSelectCar(carName);
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      window.scrollTo({
+        top: contactSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section id="gallery" className="container-gallery">
       <Row
@@ -66,7 +76,10 @@ function Gallery({ onSelectCar }) {
                 </Card.Text>
                 <Button
                   variant="secondary"
-                  onClick={() => handleSelectCar(car.name)}
+                  onClick={() => {
+                    handleSelectCar(car.name);
+                    scrollToContact();
+                  }}
                 >
                   Zarezerwuj
                 </Button>
@@ -107,7 +120,15 @@ function Gallery({ onSelectCar }) {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary">Zarezerwuj</Button>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              handleSelectCar(selectedImage.name);
+              scrollToContact();
+            }}
+          >
+            Zarezerwuj
+          </Button>
         </Modal.Footer>
       </Modal>
     </section>
