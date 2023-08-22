@@ -27,6 +27,7 @@ function Gallery({ onSelectCar }) {
 
   const handleSelectCar = (carName) => {
     onSelectCar(carName);
+    setShowModal(false);
   };
 
   const scrollToContact = () => {
@@ -125,6 +126,7 @@ function Gallery({ onSelectCar }) {
             onClick={() => {
               handleSelectCar(selectedImage.name);
               scrollToContact();
+              setShowModal(false);
             }}
           >
             Zarezerwuj
