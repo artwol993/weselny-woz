@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 
-function Gallery() {
+function Gallery({ onSelectCar }) {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -19,7 +19,14 @@ function Gallery() {
 
   const handleImageClick = (imageUrl, gallery, name, description) => {
     setSelectedImage({ imageUrl, gallery, name, description });
+
+    onSelectCar(name);
+
     setShowModal(true);
+  };
+
+  const handleSelectCar = (carName) => {
+    onSelectCar(carName);
   };
 
   return (
@@ -57,7 +64,12 @@ function Gallery() {
                   <p>{car.price}</p>
                   <p>{car.description}</p>
                 </Card.Text>
-                <Button variant="secondary">Zarezerwuj</Button>
+                <Button
+                  variant="secondary"
+                  onClick={() => handleSelectCar(car.name)}
+                >
+                  Zarezerwuj
+                </Button>
                 {""}
               </Card.Body>
             </Card>
