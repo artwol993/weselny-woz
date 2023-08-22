@@ -10,7 +10,7 @@ import Card from "react-bootstrap/Card";
 
 function Quality() {
   return (
-    <section id="Quality" className="quality-container p-5">
+    <section id="quality" className="quality-container p-5">
       <Container>
         <Row className="text-center g-4">
           <Col md>

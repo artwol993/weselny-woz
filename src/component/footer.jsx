@@ -8,7 +8,7 @@ import { Facebook } from "../assets/icons/facebook";
 function Footer() {
   return (
     <>
-      <section className="footer">
+      <section className="footer" id="footer">
         <Container fluid>
           <p className="h1 mb-5">Skontaktuj się z nami</p>
           <Row>
