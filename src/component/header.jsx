@@ -8,7 +8,7 @@ import Logo from "./logo";
 function Header() {
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar expand="lg">
         <Container>
           <Navbar.Brand href="#home">
             <Logo />

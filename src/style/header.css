@@ -1,12 +1,12 @@
-.languages {
-  list-style: none;
-  display: flex;
-  float: right;
-  color: aliceblue;
-  
+.navbar {
+  background-image:linear-gradient(to right, #012f70, #011a3d,#0144a3); 
 }
 
-li {
-  margin-left: 5px;
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link:hover {
+  color: lightgray; 
 }
 
