@@ -3,12 +3,20 @@
   font-family: 'DM Serif Display', serif;
 }
 
+.navbar-toggler-icon {
+  background-image: gold!important;
+}
 .navbar .nav-link {
   color: white;
+  font-size: 20px;
 }
 
 .navbar .nav-link:hover {
   color: gold;
+}
+
+.navbar .navbar-nav {
+  align-items: center;
 }
 
 .navbar-collapse {
@@ -19,4 +27,9 @@
 .navbar-collapse .nav-link {
   margin: 5px 20px;
 
+}
+
+.box {
+  display: flex;
+  align-items: center;
 }
