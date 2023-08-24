@@ -8,7 +8,7 @@ import Logo from "./logo";
 function Header() {
   return (
     <>
-      <Navbar expand="lg" className="navbar">
+      <Navbar expand="lg">
         <Container>
           <Navbar.Brand href="#home">
             <Logo />
@@ -18,10 +18,9 @@ function Header() {
             <Nav>
               <Nav.Link href="#home">Witaj</Nav.Link>
               <Nav.Link href="#about-us">O nas</Nav.Link>
-              <Nav.Link href="#quality">Oferta</Nav.Link>
-              <Nav.Link href="#terms">Warunki</Nav.Link>
-              <Nav.Link href="#gallery">Galeria Aut</Nav.Link>
-              <Nav.Link href="#contact">Wycena</Nav.Link>
+              <Nav.Link href="#terms">Oferta</Nav.Link>
+              <Nav.Link href="#gallery">Nasze Samochody</Nav.Link>
+              <Nav.Link href="#contact">Kontakt</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

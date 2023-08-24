@@ -7,18 +7,26 @@ function AboutUs() {
     <section id="about-us">
       <div className="container container-about-us">
         <Container>
-          <p class="h5">
-            W "Weselnym Wozie" wierzymy, że droga do ślubu jest równie ważna jak
-            sama uroczystość. Dlatego od 2023 roku dostarczamy nie tylko
-            luksusowe auta, ale także niezapomniane wspomnienia. Nasza pasja i
-            zaangażowanie w to, co robimy, pozwoliły nam zdobyć zaufanie wielu
-            par młodych. Dzięki naszemu doświadczeniu i dbałości o każdy detal,
-            możemy zagwarantować, że podróż z nami będzie jednym z
-            najpiękniejszych momentów tego wyjątkowego dnia. Nasz zespół,
-            składający się z profesjonalistów, jest zawsze gotowy, aby sprostać
-            oczekiwaniom nawet najbardziej wymagających klientów. Wybierając
-            "Weselny Wóz", wybierasz nie tylko transport, ale przede wszystkim
-            niezawodność, styl i elegancję
+          <p>
+            W naszej firmie "Weselny Wóz" jesteśmy przekonani, że droga, która
+            prowadzi do uroczystości ślubnej, jest nie mniej ważna niż sam ślub.
+            Dlatego już od 2023 roku nie tylko dostarczamy luksusowe środki
+            transportu, ale przede wszystkim kreujemy niezapomniane wspomnienia.
+            Nasza pasja i oddanie temu, co robimy, przyczyniły się do zdobywania
+            serc wielu par młodych w okolicach Łukowa (Lubelskie), oraz w takich
+            metropoliach jak Warszawa, Lublin czy Białystok.
+          </p>
+          <p>
+            Nasza misja to nie tylko zapewnienie transportu - to gwarancja
+            wyjątkowości, elegancji oraz niezawodności w każdym calu.
+            Profesjonalny zespół firmy "Weselny Wóz" jest zawsze gotowy sprostać
+            oczekiwaniom nawet najbardziej wymagających klientów, dbając o
+            każdy, nawet najdrobniejszy detal.
+          </p>
+          <p>
+            Wybierając nas, wybierasz nie tylko luksusowy środek transportu, ale
+            przede wszystkim pewność, że każdy moment spędzony z nami stanie się
+            wyjątkowym wspomnieniem.
           </p>
         </Container>
       </div>

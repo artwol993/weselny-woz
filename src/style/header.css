@@ -1,17 +1,14 @@
 .navbar {
-  background-color: #ffff;
-}
-
-.nav-link {
-  color: black!important;
+  background-image:linear-gradient(to right, #012f70, #011a3d,#0144a3); 
   font-family: 'DM Serif Display', serif;
-  border-bottom: 2px solid #ffff;
-  transition: font-weight 0.3s ease, border-bottom 0.3s ease;
 }
 
-.nav-link:hover{
-  font-weight: 400;
-  border-bottom: 2px solid #012f70;
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link:hover {
+  color: rgb(255, 217, 0); 
 }
 
 .navbar-collapse {
