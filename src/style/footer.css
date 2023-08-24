@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   color: #FFEAEA;
-  background-color:#3C486B;
+  background:linear-gradient(to right, #012f70, #011a3d,#0144a3);
   padding: 2em;
 }
 
@@ -35,7 +35,7 @@ a:active {
 
 .footer-link:hover {
   filter: invert(0.5);
-  
+  color: gold;
 }
 
 .footer-social {

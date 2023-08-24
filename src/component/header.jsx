@@ -13,7 +13,7 @@ function Header() {
           <Navbar.Brand href="#home">
             <Logo />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
               <Nav.Link href="#home">Witaj</Nav.Link>

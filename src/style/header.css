@@ -1,12 +1,35 @@
 .navbar {
-  background-image:linear-gradient(to right, #012f70, #011a3d,#0144a3); 
+  background:linear-gradient(to right, #012f70, #011a3d,#0144a3); 
+  font-family: 'DM Serif Display', serif;
 }
 
+.navbar-toggler-icon {
+  background-image: gold!important;
+}
 .navbar .nav-link {
   color: white;
+  font-size: 20px;
 }
 
 .navbar .nav-link:hover {
-  color: lightgray; 
+  color: gold;
 }
 
+.navbar .navbar-nav {
+  align-items: center;
+}
+
+.navbar-collapse {
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-collapse .nav-link {
+  margin: 5px 20px;
+
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}

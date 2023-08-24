@@ -26,7 +26,7 @@ function Terms() {
         </div>
         <div className="terms-item">
           <p class="h5">Elastyczny zasięg</p>
-          <p> Obsługujemy tereny w promieniu aż 300 km od Łukowa.</p>
+          <p> Obsługujemy tereny w promieniu aż 150 km od Łukowa.</p>
         </div>
         <div className="terms-item">
           <p class="h5">Personalizacja</p>

@@ -6,7 +6,6 @@
 .terms-title {
   font-weight: 600;
   margin-bottom: 30px;
-  color: #333;
 }
 
 .terms-item {
@@ -15,15 +14,10 @@
   flex-direction: column;
   justify-content: center; 
   padding: 10px 0;
-  border-bottom: 1px solid #e1e1e1; 
+  border-bottom: 1px solid #012f70; 
 }
 
 .terms-item:last-child {
   border-bottom: none; 
 }
 
-.terms-icon {
-  font-size: 24px; 
-  margin-right: 20px;
-  color: #007bff; 
-}

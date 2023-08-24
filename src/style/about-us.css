@@ -3,6 +3,7 @@
 .container-about-us {
   height: 600px;
   text-align: center;
+  font-family:'DM Serif Display', serif;
   display: flex;
   justify-content: center;
   align-items: center;

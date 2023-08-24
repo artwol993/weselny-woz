@@ -22,3 +22,12 @@
 .modal-body {
   overflow-y: auto;
 }
+
+button {
+  font-family: 'DM Serif Display', serif!important;
+  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+}
+
+button:hover {
+  color: gold!important;
+}
