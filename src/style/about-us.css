@@ -3,7 +3,6 @@
 .container-about-us {
   height: 600px;
   text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
