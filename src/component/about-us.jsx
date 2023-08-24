@@ -8,11 +8,25 @@ function AboutUs() {
       <div className="container container-about-us">
         <Container>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias
-            quod id eaque tenetur! Quis reiciendis voluptate, magnam delectus
-            possimus hic dolores praesentium eaque aperiam in corrupti dicta
-            ducimus voluptatum officia veritatis earum debitis exercitationem
-            perspiciatis numquam distinctio, ipsa dolore ratione doloremque?
+            W naszej firmie "Weselny Wóz" jesteśmy przekonani, że droga, która
+            prowadzi do uroczystości ślubnej, jest nie mniej ważna niż sam ślub.
+            Dlatego już od 2023 roku nie tylko dostarczamy luksusowe środki
+            transportu, ale przede wszystkim kreujemy niezapomniane wspomnienia.
+            Nasza pasja i oddanie temu, co robimy, przyczyniły się do zdobywania
+            serc wielu par młodych w okolicach Łukowa (Lubelskie), oraz w takich
+            metropoliach jak Warszawa, Lublin czy Białystok.
+          </p>
+          <p>
+            Nasza misja to nie tylko zapewnienie transportu - to gwarancja
+            wyjątkowości, elegancji oraz niezawodności w każdym calu.
+            Profesjonalny zespół firmy "Weselny Wóz" jest zawsze gotowy sprostać
+            oczekiwaniom nawet najbardziej wymagających klientów, dbając o
+            każdy, nawet najdrobniejszy detal.
+          </p>
+          <p>
+            Wybierając nas, wybierasz nie tylko luksusowy środek transportu, ale
+            przede wszystkim pewność, że każdy moment spędzony z nami stanie się
+            wyjątkowym wspomnieniem.
           </p>
         </Container>
       </div>

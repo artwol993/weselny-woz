@@ -1,0 +1,23 @@
+.terms-container {
+  background-color: #f9f9f9; 
+  padding: 50px 0; 
+}
+
+.terms-title {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.terms-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; 
+  padding: 10px 0;
+  border-bottom: 1px solid #012f70; 
+}
+
+.terms-item:last-child {
+  border-bottom: none; 
+}
+
