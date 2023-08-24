@@ -1,5 +1,5 @@
 .navbar {
-  background-image:linear-gradient(to right, #012f70, #011a3d,#0144a3); 
+  background:linear-gradient(to right, #012f70, #011a3d,#0144a3); 
   font-family: 'DM Serif Display', serif;
 }
 
@@ -8,7 +8,7 @@
 }
 
 .navbar .nav-link:hover {
-  color: rgb(255, 217, 0); 
+  color: gold;
 }
 
 .navbar-collapse {
