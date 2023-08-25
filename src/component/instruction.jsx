@@ -40,7 +40,7 @@ const Instruction = () => {
             </div>
             <div className="step">
               <div className="step-circle">5</div>
-              Have fun
+              Baw się dobrze!
             </div>
           </div>
         </div>

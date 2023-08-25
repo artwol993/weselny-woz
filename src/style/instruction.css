@@ -25,7 +25,7 @@
   justify-content: space-evenly; 
   align-items: center; 
   flex-wrap: wrap; 
-  margin: 50px 0;
+  margin-bottom: 50px;
 }
 
 .step-col {
@@ -46,7 +46,7 @@
 }
 
 .step span {
-  font-size: 40px;
+  font-size: 60px;
   display: block;
   margin-bottom: 10px;
 }
