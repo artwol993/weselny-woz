@@ -4,7 +4,7 @@
 }
 
 .terms-title {
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 
@@ -14,7 +14,12 @@
   flex-direction: column;
   justify-content: center; 
   padding: 10px 0;
-  border-bottom: 1px solid #012f70; 
+  border-bottom: 2px solid #012f70; 
+}
+
+.terms-item-title {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .terms-item:last-child {
