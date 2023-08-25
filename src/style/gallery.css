@@ -1,6 +1,7 @@
 .container-gallery {
   margin-top: 35px;
   padding-inline: 50px;
+  font-family:'DM Serif Display', serif;
 }
 
 .box-photo:hover {

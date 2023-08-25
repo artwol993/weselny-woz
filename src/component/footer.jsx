@@ -17,8 +17,8 @@ function Footer() {
                 <a href="tel:555666333" className="footer-link">
                   <p className="h3 text-white">+48 555 666 333</p>
                 </a>
-                <a href="mailto:biuro@rent-car.pl" className="footer-link">
-                  <p className="h3 text-white"> biuro@rent-car.pl</p>{" "}
+                <a href="mailto:biuro@weselny-woz.pl" className="footer-link">
+                  <p className="h3 text-white"> biuro@weselny-woz.pl</p>{" "}
                 </a>
               </div>
             </Container>
