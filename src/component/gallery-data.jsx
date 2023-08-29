@@ -1,31 +1,31 @@
 const Cars = [
   {
     id: 1,
-    image: "images/car1.jpg",
-    name: "car1",
+    image: "images/s-1.jpg",
+    name: "Mercedes S",
     category: "sport",
     price: "1100pln",
-    gallery: ["images/car1.1.jpg", "images/car1.2.jpg", "images/car1.3.jpg"],
+    gallery: ["images/s-2.jpg", "images/s-3.jpg"],
     description:
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, voluptatibus? Nemo tenetur quam, tempore magnam molestiae voluptatibus beatae aspernatur cum.",
   },
   {
     id: 2,
-    image: "images/car2.jpg",
-    name: "car2",
+    image: "images/p-1.jpg",
+    name: "Porsche",
     category: "classic",
     price: "1200pln",
-    gallery: ["images/car1.1.jpg", "images/car1.2.jpg", "images/car1.3.jpg"],
+    gallery: ["images/p-2.jpg", "images/p-3.jpg"],
     description:
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, voluptatibus? Nemo tenetur quam, tempore magnam molestiae voluptatibus beatae aspernatur cum.",
   },
   {
     id: 3,
-    image: "images/car3.jpg",
-    name: "car3",
+    image: "images/a6-1.jpg",
+    name: "Audi A6",
     category: "limousine",
     price: "1300pln",
-    gallery: ["images/car1.1.jpg", "images/car1.2.jpg", "images/car1.3.jpg"],
+    gallery: ["images/a6-1.jpg", "images/16-2.jpg", "images/a6-3.jpg"],
     description:
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, voluptatibus? Nemo tenetur quam, tempore magnam molestiae voluptatibus beatae aspernatur cum.",
   },
