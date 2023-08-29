@@ -40,9 +40,9 @@ function Quality() {
                 <Card.Title className=" mb-3">Zespół pełen pasji</Card.Title>
                 <Card.Text>
                   Choć nasza firma powstała w 2023 roku, nasi kierowcy i zespół
-                  mają lata doświadczenia w branży transportowej i weselnej.
-                  Dbamy o każdy detal, by Twój wyjątkowy dzień był doskonały. Z
-                  nami możesz być pewien, że każdy moment zostanie zaplanowany i
+                  mają lata doświadczenia w branży samochodowej. Dbamy o każdy
+                  detal, by Twój wyjątkowy dzień był doskonały. Z nami możesz
+                  być pewien, że każdy moment zostanie zaplanowany i
                   zrealizowany z pasją.
                 </Card.Text>
               </Card.Body>
@@ -66,8 +66,7 @@ function Quality() {
                   najwyższe standardy jakości. Nasza flota składa się z
                   najlepiej utrzymanych luksusowych samochodów, a nasi kierowcy
                   są szkoleni, by zapewnić najwyższy poziom bezpieczeństwa i
-                  komfortu podczas jazdy. Wybierając "Weselny Wóz", wybierasz
-                  gwarancję niezawodności.
+                  komfortu podczas jazdy.
                 </Card.Text>
               </Card.Body>
             </div>

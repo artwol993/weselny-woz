@@ -9,9 +9,7 @@ const Instruction = () => {
           {/* Pierwsza Część */}
           <div className="row">
             <div className="col-lg-12 text-center">
-              <h2 className="section-heading text-uppercase">
-                Rezerwacja samochodów
-              </h2>
+              <h2 className="section-heading">Rezerwacja samochodu</h2>
               <p className="section-subheading">
                 Rezerwacja z nami to prosty i szybki proces. Wszystko sprowadza
                 się do pięciu łatwych kroków. Zachęcamy do skorzystania z
@@ -40,7 +38,7 @@ const Instruction = () => {
             </div>
             <div className="step">
               <div className="step-circle">5</div>
-              Have fun
+              Baw się dobrze!
             </div>
           </div>
         </div>

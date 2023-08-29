@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  font-family:'DM Serif Display', serif;
 }
 
 .box-circle {
@@ -20,3 +21,6 @@
   height: 150px;
 }
 
+.tittle {
+  text-decoration:double gold;
+}
