@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/contact.css";
 import { useForm } from "react-hook-form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
 import Cars from "./gallery-data";
@@ -16,9 +17,15 @@ function Contact({ selectedCar }) {
     formState: { errors },
   } = useForm();
 
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const onSubmit = (data) => {
     console.log(data);
+    setFormSubmitted(true);
   };
+
+  const handleClose = () => setFormSubmitted(false);
+
   return (
     <>
       <section id="contact">
@@ -166,6 +173,22 @@ function Contact({ selectedCar }) {
                     Proszę o wycenę
                   </Button>
                 </div>
+                {formSubmitted && (
+                  <Modal show={formSubmitted} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Wiadomość wysłana</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      Dziękujemy za wysłanie formularza. Twoja wiadomość została
+                      pomyślnie wysłana.
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button variant="secondary" onClick={handleClose}>
+                        Zamknij
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+                )}
               </div>
             </div>
           </Form>
