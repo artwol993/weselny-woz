@@ -55,7 +55,8 @@ function Contact({ selectedCar }) {
                 </Row>
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="city-name">
-                    <FloatingLabel controlId="city" label="Miejscowość">
+                    <FloatingLabel controlId="city">
+                      Miejscowość
                       <Form.Control
                         type="city"
                         {...register("city", {
@@ -67,7 +68,8 @@ function Contact({ selectedCar }) {
                   </Form.Group>
 
                   <Form.Group as={Col} controlId="city-zip">
-                    <FloatingLabel controlId="formZip" label="Kod pocztowy">
+                    <FloatingLabel controlId="formZip">
+                      Kod pocztowy
                       <Form.Control
                         type="city-zip"
                         {...register("zip", {
@@ -84,7 +86,8 @@ function Contact({ selectedCar }) {
                 </Row>
 
                 <Form.Group as={Col} controlId="user-name" className="mb-3">
-                  <FloatingLabel controlId="floatingInput" label="Imię">
+                  <FloatingLabel controlId="floatingInput">
+                    Imię
                     <Form.Control
                       type="name"
                       {...register("name", {
@@ -100,7 +103,8 @@ function Contact({ selectedCar }) {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="user-email" className="mb-3">
-                  <FloatingLabel controlId="floatingInput" label="Email">
+                  <FloatingLabel controlId="floatingInput">
+                    Email
                     <Form.Control
                       type="email"
                       {...register("email", {
@@ -116,7 +120,8 @@ function Contact({ selectedCar }) {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="user-phone" className="mb-3">
-                  <FloatingLabel controlId="floatingInput" label="Telefon">
+                  <FloatingLabel controlId="floatingInput">
+                    Telefon
                     <Form.Control
                       type="phone"
                       {...register("phone", {
@@ -131,10 +136,8 @@ function Contact({ selectedCar }) {
                   {errors.phone && <p>{errors.phone.message}</p>}
                 </Form.Group>
 
-                <FloatingLabel
-                  controlId="floatingTextarea2"
-                  label="Dodatkowe informacje"
-                >
+                <FloatingLabel controlId="floatingTextarea2">
+                  Dodatkowe informacje
                   <Form.Control
                     as="textarea"
                     placeholder="Zostaw komentarz"
