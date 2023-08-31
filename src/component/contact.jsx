@@ -23,7 +23,16 @@ function Contact({ selectedCar }) {
     <>
       <section id="contact">
         <Container className="my-5 ">
-          <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form
+            onSubmit={handleSubmit(onSubmit)}
+            action="https://formsubmit.co/weselnywoz@gmail.com"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New submission!"
+            ></input>
             <div className="container-contact">
               <div className="container-form">
                 <h2> Zapytaj o termin</h2>
@@ -32,7 +41,7 @@ function Contact({ selectedCar }) {
                     <FloatingLabel>Auto</FloatingLabel>
                     <Form.Select
                       {...register("car", { required: "Wybierz auto" })}
-                      value={selectedCar || ""}
+                      defaultValue={selectedCar || ""}
                     >
                       <option value="">Wybierz auto...</option>
                       {Cars.map((car) => (
