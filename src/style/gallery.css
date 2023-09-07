@@ -17,18 +17,40 @@
   height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:space-around;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background:#0144a3;
+  padding: 15px;
+  border-radius: 50px;
 }
 
 .modal-body {
   overflow-y: auto;
 }
 
-button {
-  font-family: 'DM Serif Display', serif!important;
-  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+.modal-text {
+  margin-top: 15px;
+  text-align: center;
 }
 
-button:hover {
+.b-footer{
+  border: solid 1px gold!important;
+  margin: 8px;
+  width: 350px;
+}
+
+.b-footer:hover{
   color: gold!important;
+}
+
+.b-exit {
+  background:linear-gradient(to right, #c3c3c3, #7a7a7a,#adadad)!important;
+
+}
+
+.b-reserve {
+  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+
 }

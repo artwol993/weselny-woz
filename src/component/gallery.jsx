@@ -117,12 +117,11 @@ function Gallery({ onSelectCar }) {
           </Carousel>
           <div className="modal-text">
             <h4>{selectedImage.name}</h4>
-            <p>{selectedImage.description}</p>
           </div>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer class="d-flex  flex-column justify-content-center align-items-center">
           <Button
-            variant="secondary"
+            className="b-footer b-reserve"
             onClick={() => {
               handleSelectCar(selectedImage.name);
               scrollToContact();
@@ -130,6 +129,14 @@ function Gallery({ onSelectCar }) {
             }}
           >
             Zarezerwuj
+          </Button>
+          <Button
+            className="b-footer b-exit"
+            onClick={() => {
+              setShowModal(false);
+            }}
+          >
+            Chcę wybrać inne auto
           </Button>
         </Modal.Footer>
       </Modal>
