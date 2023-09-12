@@ -9,7 +9,7 @@ function Header() {
   return (
     <>
       <Navbar expand="lg">
-        <Container>
+        <Container class="d-flex justify-content-space-evenly">
           <Navbar.Brand href="#home">
             <Logo />
           </Navbar.Brand>

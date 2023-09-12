@@ -47,9 +47,9 @@ function Gallery({ onSelectCar }) {
         onSelect={handleSelect}
         xs={1}
         sm={2}
-        md={3}
-        lg={4}
-        xl={5}
+        md={2}
+        lg={3}
+        xl={4}
         className="g-4"
       >
         {Cars.map((car) => (
@@ -91,7 +91,7 @@ function Gallery({ onSelectCar }) {
         ))}
       </Row>
 
-      <Modal show={showModal} onHide={() => setShowModal(false)} size="lg">
+      <Modal show={showModal} onHide={() => setShowModal(false)} size="xl">
         <Modal.Body>
           <Carousel
             activeIndex={index}
@@ -117,12 +117,11 @@ function Gallery({ onSelectCar }) {
           </Carousel>
           <div className="modal-text">
             <h4>{selectedImage.name}</h4>
-            <p>{selectedImage.description}</p>
           </div>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer class="d-flex  flex-column justify-content-center align-items-center">
           <Button
-            variant="secondary"
+            className="b-footer b-reserve"
             onClick={() => {
               handleSelectCar(selectedImage.name);
               scrollToContact();
@@ -130,6 +129,14 @@ function Gallery({ onSelectCar }) {
             }}
           >
             Zarezerwuj
+          </Button>
+          <Button
+            className="b-footer b-exit"
+            onClick={() => {
+              setShowModal(false);
+            }}
+          >
+            Chcę wybrać inne auto
           </Button>
         </Modal.Footer>
       </Modal>
