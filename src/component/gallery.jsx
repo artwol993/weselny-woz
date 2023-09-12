@@ -47,9 +47,9 @@ function Gallery({ onSelectCar }) {
         onSelect={handleSelect}
         xs={1}
         sm={2}
-        md={3}
-        lg={4}
-        xl={5}
+        md={2}
+        lg={3}
+        xl={4}
         className="g-4"
       >
         {Cars.map((car) => (
@@ -91,7 +91,7 @@ function Gallery({ onSelectCar }) {
         ))}
       </Row>
 
-      <Modal show={showModal} onHide={() => setShowModal(false)} size="lg">
+      <Modal show={showModal} onHide={() => setShowModal(false)} size="xl">
         <Modal.Body>
           <Carousel
             activeIndex={index}
