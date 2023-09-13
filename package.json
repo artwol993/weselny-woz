@@ -1,7 +1,7 @@
 {
   "name": "weselny-woz",
   "version": "0.1.0",
-  "homepage": "http://weselny-woz.pl",
+  "homepage": "https://weselny-woz.pl",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
