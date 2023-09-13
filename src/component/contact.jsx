@@ -150,7 +150,7 @@ function Contact({ selectedCar }) {
                 {errors.comment && <p>{errors.comment.message}</p>}
 
                 <div className="d-grid gap-2 m-3">
-                  <Button variant="secondary" size="lg" type="submit">
+                  <Button size="lg" type="submit" className="contact-button">
                     Proszę o wycenę
                   </Button>
                 </div>

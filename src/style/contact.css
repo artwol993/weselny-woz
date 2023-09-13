@@ -10,6 +10,10 @@ h2 {
   padding-bottom: 25px;
 }
 
+.contact-button {
+  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+}
+
 
 @media only screen and (min-width: 992px) {
   .container-form {
