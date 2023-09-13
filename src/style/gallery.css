@@ -10,15 +10,18 @@
 }
 
 .modal-dialog {
-  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-  height: 95vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content:space-around;
 }
+
 
 .carousel-control-next-icon, .carousel-control-prev-icon{
   background:#0144a3;
@@ -50,7 +53,17 @@
 
 }
 
-.b-reserve {
+.b-reserve  {
   background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+}
 
+
+.gallery-button {
+  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+}
+
+@media (min-width: 576px) {
+  .modal-content {
+    height: 95vh;
+  }
 }

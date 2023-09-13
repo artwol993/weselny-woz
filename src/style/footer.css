@@ -31,13 +31,16 @@ a:active {
 
 .footer-link {
   margin: 5px;
+  color: white
 }
 
 .footer-link:hover {
-  filter: invert(0.5);
   color: gold;
 }
 
-.footer-social {
-  font-size: 4em;
+.footer-social-link {
+  font-size: 3em;
 }
+
+.footer-social-link:hover{
+  filter: blur(1px);}

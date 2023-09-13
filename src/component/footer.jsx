@@ -15,10 +15,10 @@ function Footer() {
             <Container>
               <div className="d-flex justify-content-around">
                 <a href="tel:+48796389045" className="footer-link">
-                  <p className="h2 text-white">796 389 045</p>
+                  <p className="h3">796 389 045</p>
                 </a>
                 <a href="mailto:biuro@weselny-woz.pl" className="footer-link">
-                  <p className="h2 text-white"> biuro@weselny-woz.pl</p>{" "}
+                  <p className="h3"> biuro@weselny-woz.pl</p>{" "}
                 </a>
               </div>
             </Container>
@@ -26,10 +26,16 @@ function Footer() {
           <Row>
             <Container>
               <div className="footer-social">
-                <a href="https://www.instagram.com" className="footer-link">
+                <a
+                  href="https://www.instagram.com"
+                  className="footer-social-link"
+                >
                   <Instagram />{" "}
                 </a>
-                <a href="https://www.facebook.com" className="footer-link">
+                <a
+                  href="https://www.facebook.com"
+                  className="footer-social-link"
+                >
                   <Facebook />{" "}
                 </a>
               </div>
