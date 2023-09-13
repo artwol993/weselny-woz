@@ -1,11 +1,20 @@
 .navbar {
-  background:linear-gradient(to right, #012f70, #011a3d,#0144a3); 
+  background:linear-gradient(to right, #012f70, #011a3d, #0144a3); 
   font-family: 'DM Serif Display', serif;
+  position: sticky!important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.navbar-toggler-icon {
-  background-image: gold!important;
+.navbar.reduced {
+  height: 60px; 
 }
+
+.container {
+  width: 90%;
+}
+
 .navbar .nav-link {
   color: white;
   font-size: 20px;
@@ -13,6 +22,14 @@
 
 .navbar .nav-link:hover {
   color: gold;
+}
+
+.navbar-toggler-custom {
+  border-color: gold!important;
+}
+
+.navbar-toggler-custom .navbar-toggler-icon {
+  color: gold; 
 }
 
 .navbar .navbar-nav {
@@ -32,4 +49,8 @@
 .box {
   display: flex;
   align-items: center;
+}
+
+.small-logo{
+  opacity: 0.5;
 }
