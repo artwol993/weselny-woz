@@ -1,16 +1,19 @@
-.sticky-header .navbar {
-  position: fixed;
+.navbar {
+  background:linear-gradient(to right, #012f70, #011a3d, #0144a3); 
+  font-family: 'DM Serif Display', serif;
+  position: sticky!important;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(to right, #012f70, #011a3d, #0144a3);
-  font-family: 'DM Serif Display', serif;
+}
+
+.navbar.reduced {
+  height: 60px; 
 }
 
 .container {
-  width: 90%!important;
+  width: 90%;
 }
-
 
 .navbar .nav-link {
   color: white;
@@ -46,4 +49,8 @@
 .box {
   display: flex;
   align-items: center;
+}
+
+.small-logo{
+  opacity: 0.5;
 }
