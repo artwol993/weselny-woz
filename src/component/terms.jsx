@@ -14,7 +14,7 @@ function Terms() {
           <p>Zacznij swoją podróż bez dodatkowych kosztów.</p>
         </div>
         <div className="terms-item">
-          <p class="terms-item-title">Pierwsze 5 godzin gratis</p>
+          <p class="terms-item-title">Pierwsze 5 godzin za darmo</p>
           <p>Potrzebujesz więcej czasu? Zaproponujemy Ci korzystną ofertę.</p>
         </div>
         <div className="terms-item">
