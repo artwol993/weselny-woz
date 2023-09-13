@@ -76,7 +76,7 @@ function Gallery({ onSelectCar }) {
                   <p>{car.description}</p>
                 </Card.Text>
                 <Button
-                  variant="secondary"
+                  className="gallery-button"
                   onClick={() => {
                     handleSelectCar(car.name);
                     scrollToContact();
