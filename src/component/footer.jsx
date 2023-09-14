@@ -27,7 +27,7 @@ function Footer() {
             <Container>
               <div className="footer-social">
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/weselnywoz/"
                   className="footer-social-link"
                 >
                   <Instagram />{" "}

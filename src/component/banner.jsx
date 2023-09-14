@@ -5,7 +5,7 @@ import "../style/banner.css";
 function Banner() {
   return (
     <section id="banner" className="banner-section">
-      <a href="https://www.instagram.com">
+      <a href="https://www.instagram.com/weselnywoz/">
         <div className="banner-container">
           <span className="banner-p">
             Sprawdź nasze promocje <Instagram />
