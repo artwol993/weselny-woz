@@ -17,8 +17,8 @@ function Gallery({ onSelectCar }) {
     setIndex(selectedIndex);
   };
 
-  const handleImageClick = (imageUrl, gallery, name, description) => {
-    setSelectedImage({ imageUrl, gallery, name, description });
+  const handleImageClick = (imageUrl, gallery, name, year, engine) => {
+    setSelectedImage({ imageUrl, gallery, name, year, engine });
 
     onSelectCar(name);
 
@@ -65,15 +65,17 @@ function Gallery({ onSelectCar }) {
                     car.image,
                     car.gallery,
                     car.name,
-                    car.description
+                    car.year,
+                    car.engine
                   )
                 }
               />
               <Card.Body>
                 <Card.Title>{car.name}</Card.Title>
                 <Card.Text>
-                  <p>{car.price}</p>
-                  <p>{car.description}</p>
+                  <p className="card-body-txt">{car.price}</p>
+                  <p className="card-body-txt">{car.year}</p>
+                  <p className="card-body-txt">{car.engine}</p>
                 </Card.Text>
                 <Button
                   className="gallery-button"

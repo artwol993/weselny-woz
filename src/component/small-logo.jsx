@@ -20,3 +20,4 @@ function SmallLogo() {
 }
 
 export default SmallLogo;
+

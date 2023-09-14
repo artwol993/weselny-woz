@@ -4,6 +4,10 @@
   font-family:'DM Serif Display', serif;
 }
 
+.card-body-txt {
+  margin-bottom: 2px;
+}
+
 .box-photo:hover {
   cursor: pointer;
   opacity: 0.5;
@@ -53,13 +57,14 @@
 
 }
 
-.b-reserve  {
+.b-reserve {
   background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
 }
 
 
 .gallery-button {
   background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+  margin-top: 3px;
 }
 
 @media (min-width: 576px) {
