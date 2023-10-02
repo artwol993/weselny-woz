@@ -1,36 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../style/header.css";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Logo from "./logo";
-import SmallLogo from "./small-logo";
 
 function Header() {
-  const [isHeaderReduced, setIsHeaderReduced] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsHeaderReduced(true);
-      } else {
-        setIsHeaderReduced(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <>
       <Navbar expand="lg" className="navbar-dark" aria-label="Header">
         <Container className="d-flex justify-content-between">
           <Navbar.Brand href="#home">
-            {isHeaderReduced ? <SmallLogo className="small-logo" /> : <Logo />}
+            <Logo />
           </Navbar.Brand>
           <Navbar.Toggle as="button" className="navbar-toggler-custom" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -59,4 +40,3 @@ function Header() {
 }
 
 export default Header;
-
