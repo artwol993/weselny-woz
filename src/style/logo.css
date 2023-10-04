@@ -1,5 +1,5 @@
 .box {
-  width: 100px;
+  width: 130px;
   height: 110px;
   padding: 5px;
 }
@@ -16,6 +16,23 @@
 
 .logo-tittle {
   color: #FFFFFF;
-  font-size: 23px;
+  font-size: 25px;
   font-family: 'DM Serif Display', serif;
+}
+
+@media only screen and (max-width: 576px) {
+
+  .box {
+    height: 70px;
+  }
+
+
+  .logo-icon {
+    height: 75px;
+  }
+
+  .logo-tittle {
+    font-size: 20px;
+  }
+
 }
