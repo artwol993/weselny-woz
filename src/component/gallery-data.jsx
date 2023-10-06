@@ -12,7 +12,7 @@ const Cars = [
       "images/s-5.jpg",
     ],
     year: "Rok produkcji: 2023",
-    engine: "3.0 330km",
+    engine: "3.0 330hp",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const Cars = [
     price: "2400pln",
     gallery: ["images/p-2.jpg", "images/p-3.jpg", "images/p-4.jpg"],
     year: "Rok produkcji: 2013",
-    engine: "3.0 V6 258KM",
+    engine: "3.0 V6 258hp",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const Cars = [
     price: "1700pln",
     gallery: ["images/a6-2.jpg", "images/a6-3.jpg", "images/a6-4.jpg"],
     year: "Rok produkcji: 2020",
-    engine: "3.0 50 TDI 286KM",
+    engine: "3.0 50 TDI 286hp",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const Cars = [
       "images/aq8-5.jpg",
     ],
     year: "Rok produkcji: 2020",
-    engine: "3.0 50 TDI 286KM",
+    engine: "3.0 50 TDI 286hp",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const Cars = [
       "images/rs6-5.jpg",
     ],
     year: "Rok produkcji: 2022",
-    engine: "4.0 TFSI 600KM",
+    engine: "4.0 TFSI 600hp",
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ const Cars = [
     price: "2200pln",
     gallery: ["images/gle-1.jpg", "images/gle-2.jpg"],
     year: "Rok produkcji: 2018",
-    engine: "3.0 350d 258KM",
+    engine: "3.0 350d 258hp",
   },
 ];
 
