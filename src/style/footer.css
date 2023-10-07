@@ -5,7 +5,7 @@
   text-align: center;
   color: #FFEAEA;
   background:linear-gradient(to right, #012f70, #011a3d,#0144a3);
-  padding: 2em;
+  padding: 1em;
 }
 
 a:link {
@@ -30,8 +30,9 @@ a:active {
 }
 
 .footer-link {
-  margin: 5px;
-  color: white
+  margin: 3px;
+  color: white;
+  font-size: 23px
 }
 
 .footer-link:hover {
@@ -43,4 +44,20 @@ a:active {
 }
 
 .footer-social-link:hover{
-  filter: blur(1px);}
+  filter: blur(1px);
+}
+
+.footer-phone {
+  margin-left: 25px;
+}
+
+@media (max-width: 576px) { 
+
+  .footer-link {
+    font-size: 16px
+  }
+
+  .footer-social-link {
+    font-size: 2em;
+  }
+}

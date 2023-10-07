@@ -15,10 +15,10 @@ function Footer() {
             <Container>
               <div className="d-flex justify-content-around">
                 <a href="tel:+48796389045" className="footer-link">
-                  <p className="h3">796 389 045</p>
+                  <span className="footer-phone">796 389 045</span>
                 </a>
                 <a href="mailto:biuro@weselny-woz.pl" className="footer-link">
-                  <p className="h3"> biuro@weselny-woz.pl</p>{" "}
+                  <span className="footer-email"> biuro@weselny-woz.pl</span>{" "}
                 </a>
               </div>
             </Container>
