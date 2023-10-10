@@ -12,6 +12,9 @@ import Instruction from "./instruction";
 function Body() {
   const [selectedCar, setSelectedCar] = React.useState(null);
 
+  const handleCarSelect = (carName) => {
+    setSelectedCar(carName);
+  };
   return (
     <div>
       <WelcomeCarousel />
@@ -22,7 +25,7 @@ function Body() {
       <Instruction />
       <Gallery onSelectCar={setSelectedCar} />
       <PhotoBlock />
-      <Contact selectedCar={selectedCar} />
+      <Contact selectedCar={selectedCar} onCarSelect={handleCarSelect} />{" "}
     </div>
   );
 }

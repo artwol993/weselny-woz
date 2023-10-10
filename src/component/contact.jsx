@@ -9,21 +9,31 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
 import Cars from "./gallery-data";
 
-function Contact({ selectedCar }) {
+function Contact({ selectedCar, onCarSelect }) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const handleCarSelect = (event) => {
+    const selectedCarName = event.target.value;
+    onCarSelect(selectedCarName);
+  };
+
   const onSubmit = (data) => {
     console.log(data);
   };
+
   return (
     <>
       <section id="contact">
         <Container className="my-5 ">
-          <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form
+            onSubmit={handleSubmit(onSubmit)}
+            action="https://formsubmit.co/biuro@weselny-woz.com"
+            method="POST"
+          >
             <div className="container-contact">
               <div className="container-form">
                 <h2> Zapytaj o termin</h2>
@@ -32,7 +42,8 @@ function Contact({ selectedCar }) {
                     <FloatingLabel>Auto</FloatingLabel>
                     <Form.Select
                       {...register("car", { required: "Wybierz auto" })}
-                      value={selectedCar || ""}
+                      value={selectedCar || " "}
+                      onChange={handleCarSelect}
                     >
                       <option value="">Wybierz auto...</option>
                       {Cars.map((car) => (
