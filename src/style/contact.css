@@ -14,6 +14,17 @@ h2 {
   background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
 }
 
+.contact-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-modal-txt {
+  font-size: 40px;
+  text-align: center;
+}
+
 
 @media only screen and (min-width: 992px) {
   .container-form {
