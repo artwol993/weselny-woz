@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../style/contact.css";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,31 +10,6 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Cars from "./gallery-data";
-
-function ConfirmationModal({ showModal, onClose }) {
-  return (
-    <Modal
-      show={showModal}
-      onHide={onClose}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Body className="contact-modal">
-        <div className="contact-modal-picture"></div>
-        <p className="contact-modal-txt">
-          Dziękujemy za wysłanie zapytania. Skontaktujemy się z Tobą najszybciej
-          jak to możliwe
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={onClose} className="contact-button">
-          Zamknij
-        </Button>
-      </Modal.Footer>
-    </Modal>
-  );
-}
 
 function Contact({ selectedCar, onCarSelect }) {
   const {
@@ -47,23 +23,34 @@ function Contact({ selectedCar, onCarSelect }) {
     onCarSelect(selectedCarName);
   };
 
+  const sendEmail = (formData) => {
+    emailjs
+      .send(
+        "service_w63u46p", // Your EmailJS service ID
+        "template_f8jtxib", // Your EmailJS template ID
+        formData,
+        "ARO6YERE-E-Z56lDn" // Your EmailJS public key
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully: ", response);
+          setShowConfirmationModal(true);
+        },
+        (error) => {
+          console.error("Email send error: ", error);
+        }
+      );
+  };
+
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
-
-  const onSubmit = (data) => {
-    setShowConfirmationModal(true);
-  };
-
-  const closeModal = () => {
-    setShowConfirmationModal(false);
-  };
 
   return (
     <>
       <section id="contact">
         <Container className="my-5 ">
           <Form
-            onSubmit={handleSubmit(onSubmit)}
-            action="https://formsubmit.co/biuro@weselny-woz.pl"
+            onSubmit={handleSubmit(sendEmail)}
+            action="https://api.emailjs.com/api/v1.0/email/send"
             method="POST"
           >
             <div className="container-contact">
@@ -172,7 +159,7 @@ function Contact({ selectedCar, onCarSelect }) {
                       {...register("phone", {
                         required: "Podaj Numer telefonu",
                         pattern: {
-                          value: /^(?:\+?48)?(?:\d{9})$/,
+                          value: /^[0-9]{9}$/,
                           message: "Błędny numer telefonu",
                         },
                       })}
@@ -210,10 +197,29 @@ function Contact({ selectedCar, onCarSelect }) {
           </Form>
         </Container>
       </section>
-      <ConfirmationModal
-        showModal={showConfirmationModal}
-        onClose={closeModal}
-      />
+
+      {showConfirmationModal && (
+        <Modal
+          show={showConfirmationModal}
+          onHide={() => setShowConfirmationModal(false)}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Wiadomość wysłana</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Dziękujemy za wysłanie zapytania. Skontaktujemy się z Tobą
+            najszybciej jak to możliwe!
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              onClick={() => setShowConfirmationModal(false)}
+            >
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
     </>
   );
 }
