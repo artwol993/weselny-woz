@@ -160,7 +160,7 @@ function Contact({ selectedCar, onCarSelect }) {
                       {...register("phone", {
                         required: "Podaj Numer telefonu",
                         pattern: {
-                          value: /^[0-9]{9}$/,
+                          value: /^(?:\+\d{2})?\d{9}$/,
                           message: "Błędny numer telefonu",
                         },
                       })}
