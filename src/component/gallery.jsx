@@ -42,6 +42,12 @@ function Gallery({ onSelectCar }) {
 
   return (
     <section id="gallery" className="container-gallery">
+      <h2> Wybierz auto</h2>
+      <p className="text-center h4">
+        Podane ceny są cenami orientacyjnymi, aby poznać dokładną cenę wypełnij
+        formularz lub skontaktuj się z nami telefonicznie{" "}
+      </p>
+      <br></br>
       <Row
         activeIndex={index}
         onSelect={handleSelect}
