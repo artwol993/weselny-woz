@@ -10,6 +10,7 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Cars from "./gallery-data";
+import emailSended from "../assets/emailSended.jpg";
 
 function Contact({ selectedCar, onCarSelect }) {
   const {
@@ -207,16 +208,23 @@ function Contact({ selectedCar, onCarSelect }) {
           <Modal.Header closeButton>
             <Modal.Title>Wiadomość wysłana</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            Dziękujemy za wysłanie zapytania. Skontaktujemy się z Tobą
-            najszybciej jak to możliwe!
+          <Modal.Body className="contact-modal">
+            <img
+              className="email-sended-icon"
+              src={emailSended}
+              alt="email sended pic"
+            />
+            <p className="contact-modal-txt">
+              Dziękujemy za wysłanie zapytania. <br></br>Skontaktujemy się z
+              Tobą najszybciej jak to możliwe!
+            </p>
           </Modal.Body>
           <Modal.Footer>
             <Button
-              variant="secondary"
+              className="contact-button"
               onClick={() => setShowConfirmationModal(false)}
             >
-              Close
+              Zamknij
             </Button>
           </Modal.Footer>
         </Modal>
