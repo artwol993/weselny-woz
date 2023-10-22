@@ -80,6 +80,7 @@ function Contact({ selectedCar, onCarSelect }) {
                     <Form.Control
                       type="date"
                       name="date"
+                      min={new Date().toISOString().split("T")[0]} // Ustawia minimum na dzisiejszą datę
                       {...register("date", { required: "Podaj datę" })}
                     />
                     {errors.date && <p>{errors.date.message}</p>}
