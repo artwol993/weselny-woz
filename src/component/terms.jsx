@@ -29,8 +29,11 @@ function Terms() {
           <p> Obsługujemy tereny w promieniu aż 150 km od Łukowa.</p>
         </div>
         <div className="terms-item">
-          <p class="terms-item-title">Personalizacja</p>
-          <p>Chcesz unikalne dekoracje? Dostosujemy auto do Twojego stylu.</p>
+          <p class="terms-item-title">Chcesz unikalne dekoracje?</p>
+          <p>
+            Dostosujemy auto do Twojego stylu. Posiadamy w ofercie różne
+            warianty.
+          </p>
         </div>
       </Container>
     </section>
