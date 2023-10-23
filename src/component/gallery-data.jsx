@@ -67,7 +67,7 @@ const Cars = [
     image: "images/gle-1.jpg",
     name: "Mercedes GLE Coupe",
     price: "1600pln",
-    gallery: ["images/gle-1.jpg", "images/gle-2.jpg"],
+    gallery: ["images/gle-2.jpg", "images/gle-3.jpg", "images/gle-4.jpg"],
     year: "Rok produkcji: 2020",
     engine: "4.0 350d 330hp",
   },
