@@ -16,6 +16,7 @@ function Contact({ selectedCar, onCarSelect }) {
   const {
     register,
     handleSubmit,
+    reset, // Dodaj reset do importów
     formState: { errors },
   } = useForm();
 
@@ -27,15 +28,21 @@ function Contact({ selectedCar, onCarSelect }) {
   const sendEmail = (formData) => {
     emailjs
       .send(
-        "service_w63u46p", // Your EmailJS service ID
-        "template_f8jtxib", // Your EmailJS template ID
+        "service_w63u46p",
+        "template_f8jtxib",
         formData,
-        "ARO6YERE-E-Z56lDn" // Your EmailJS public key
+        "ARO6YERE-E-Z56lDn"
       )
       .then(
         (response) => {
           console.log("Email sent successfully: ", response);
           setShowConfirmationModal(true);
+          // Zresetuj formularz po udanym wysłaniu wiadomości
+          reset(); // Wykorzystaj funkcję reset do zresetowania formularza
+          // Zamknij modal po 3 sekundach (możesz dostosować ten czas)
+          setTimeout(() => {
+            setShowConfirmationModal(false);
+          }, 3000);
         },
         (error) => {
           console.error("Email send error: ", error);
