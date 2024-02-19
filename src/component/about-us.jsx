@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import "../style/about-us.css";
+import "../style/about-us.scss";
 
 function AboutUs() {
   return (

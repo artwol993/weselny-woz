@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/instruction.css";
+import "../style/instruction.scss";
 import { Container } from "react-bootstrap";
 
 function Instruction() {

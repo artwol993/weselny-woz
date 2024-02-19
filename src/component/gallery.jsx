@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Cars from "./gallery-data";
-import "../style/gallery.css";
+import "../style/gallery.scss";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";

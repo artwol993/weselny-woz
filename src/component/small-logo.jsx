@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/small-logo.css";
+import "../style/small-logo.scss";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import weselnyWozIcon from "../assets/weselnyWozIcon.png";
@@ -20,4 +20,3 @@ function SmallLogo() {
 }
 
 export default SmallLogo;
-

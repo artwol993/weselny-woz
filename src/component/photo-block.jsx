@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/photo-block.css";
+import "../style/photo-block.scss";
 
 function PhotoBlock() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Instagram } from "../assets/icons/instagram";
-import "../style/banner.css";
+import "../style/banner.scss";
 
 function Banner() {
   return (

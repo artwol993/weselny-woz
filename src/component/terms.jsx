@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/terms.css";
+import "../style/terms.scss";
 import Container from "react-bootstrap/Container";
 
 function Terms() {
