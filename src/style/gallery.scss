@@ -1,0 +1,74 @@
+.container-gallery {
+  margin-top: 35px;
+  padding-inline: 50px;
+  font-family:'DM Serif Display', serif;
+}
+
+.card-body-txt {
+  margin-bottom: 2px;
+}
+
+.box-photo:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+}
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background:#0144a3;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.modal-body {
+  overflow-y: auto;
+}
+
+.modal-text {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.b-footer{
+  border: solid 1px gold!important;
+  margin: 8px;
+  width: 350px;
+}
+
+.b-footer:hover{
+  color: gold!important;
+}
+
+.b-exit {
+  background:linear-gradient(to right, #c3c3c3, #7a7a7a,#adadad)!important;
+
+}
+
+.b-reserve {
+  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+}
+
+
+.gallery-button {
+  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+  margin-top: 3px;
+}
+
+@media (min-width: 576px) {
+  .modal-content {
+    height: 95vh;
+  }
+}

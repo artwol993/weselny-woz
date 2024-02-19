@@ -1,0 +1,29 @@
+.terms-container {
+  background-color: #f9f9f9; 
+  padding: 50px 0; 
+  text-align: center;
+}
+
+.terms-title {
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.terms-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; 
+  padding: 10px 0;
+  border-bottom: 2px solid #012f70; 
+}
+
+.terms-item-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.terms-item:last-child {
+  border-bottom: none; 
+}
+

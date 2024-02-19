@@ -1,0 +1,38 @@
+.box {
+  width: 130px;
+  height: 110px;
+  padding: 5px;
+}
+
+.logo {
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.3s ease-in-out, height 1s ease-in-out; 
+}
+
+.logo-icon {
+  height: 100px;
+}
+
+.logo-tittle {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-family: 'DM Serif Display', serif;
+}
+
+@media only screen and (max-width: 576px) {
+
+  .box {
+    height: 70px;
+  }
+
+
+  .logo-icon {
+    height: 75px;
+  }
+
+  .logo-tittle {
+    font-size: 20px;
+  }
+
+}

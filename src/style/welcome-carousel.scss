@@ -1,0 +1,31 @@
+@media only screen and (min-width: 992px) {
+  .carousel-inner {
+   padding-left: 5%!important;
+   padding-right: 5%!important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .carousel-inner {
+   padding-left: 9%!important;
+   padding-right: 9%!important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .carousel-inner {
+   padding-left: 15%!important;
+   padding-right: 15%!important;
+  }
+}
+
+.wc-image {
+  width: auto;
+}
+
+.carousel-control-prev:hover {
+background-color: rgba(240, 248, 255, 0.564) !important
+}
+.carousel-control-next:hover {
+  background-color: rgba(240, 248, 255, 0.564) !important
+  }

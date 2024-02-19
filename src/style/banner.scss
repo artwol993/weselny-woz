@@ -1,0 +1,58 @@
+.banner-container {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite; 
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+ }
+  50% {
+    background-position: 100% 50%;
+ }
+  100% {
+    background-position: 0% 50%;
+ }
+}
+
+
+.banner-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+  
+}
+
+.banner-p {
+  color: #ffff;
+  font-size: 2.5em;
+  margin-right: 0.2em;
+  animation-name: stretch;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  text-align: center;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 768px) { 
+  .banner-p {
+    font-size: 1.5em; 
+    margin: 1rem 0;  
+  }
+}
