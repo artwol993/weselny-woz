@@ -1,56 +1,67 @@
+@import '~bootstrap/scss/bootstrap'; // Import Bootstrap's Sass
+
+$primary-color: #012f70;
+$secondary-color: #011a3d;
+$accent-color: #0144a3;
+
 .navbar {
-  background:linear-gradient(to right, #012f70, #011a3d, #0144a3); 
+  background: linear-gradient(to right, $primary-color, $secondary-color, $accent-color);
   font-family: 'DM Serif Display', serif;
   position: sticky!important;
   top: 0;
   width: 100%;
   z-index: 1000;
-}
 
-.navbar.reduced {
-  height: 60px; 
-}
+  &.reduced {
+    height: 60px;
+  }
 
-.container {
-  width: 90%;
-}
+  .container {
+    width: 90%;
+  }
 
-.navbar .nav-link {
-  color: white;
-  font-size: 20px;
-}
+  .nav-link {
+    color: white;
+    font-size: 20px;
+    transition: color 0.2s ease; // Smooth transition for hover effect
+  
+    &:hover {
+      color: gold;
+    }
+  
+    &.active {
+      color: gold; // Kolor dla aktywnego linku
+      font-weight: bold; // Dodatkowy styl dla aktywnego linku
+    }
+  }
 
-.navbar .nav-link:hover {
-  color: gold;
-}
+  .navbar-toggler-custom {
+    border-color: gold;
+  }
 
-.navbar-toggler-custom {
-  border-color: gold!important;
-}
+  .navbar-toggler-custom .navbar-toggler-icon {
+    color: gold;
+  }
 
-.navbar-toggler-custom .navbar-toggler-icon {
-  color: gold; 
-}
+  .navbar-nav {
+    align-items: center;
+  }
 
-.navbar .navbar-nav {
-  align-items: center;
-}
+  .navbar-collapse {
+    justify-content: center;
+    align-items: center;
+  }
 
-.navbar-collapse {
-  justify-content: center;
-  align-items: center;
-}
+  .navbar-collapse .nav-link {
+    margin: 5px 20px;
+  }
 
-.navbar-collapse .nav-link {
-  margin: 5px 20px;
+  .box {
+    display: flex;
+    align-items: center;
+  }
 
-}
-
-.box {
-  display: flex;
-  align-items: center;
-}
-
-.small-logo{
-  opacity: 0.5;
+  .small-logo {
+    opacity: 0.5;
+  }
 }

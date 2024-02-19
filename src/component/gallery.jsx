@@ -48,19 +48,10 @@ function Gallery({ onSelectCar }) {
         formularz lub skontaktuj się z nami telefonicznie{" "}
       </p>
       <br></br>
-      <Row
-        activeIndex={index}
-        onSelect={handleSelect}
-        xs={1}
-        sm={2}
-        md={2}
-        lg={3}
-        xl={4}
-        className="g-4"
-      >
+      <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4">
         {Cars.map((car) => (
-          <Col>
-            <Card key={car.id}>
+          <Col key={car.id}>
+            <Card>
               <Card.Img
                 className="box-photo"
                 variant="top"
@@ -79,9 +70,9 @@ function Gallery({ onSelectCar }) {
               <Card.Body>
                 <Card.Title>{car.name}</Card.Title>
                 <Card.Text>
-                  <p className="card-body-txt">{car.price}</p>
-                  <p className="card-body-txt">{car.year}</p>
-                  <p className="card-body-txt">{car.engine}</p>
+                  Cena: {car.price}
+                  Rok: {car.year}
+                  Silnik: {car.engine}
                 </Card.Text>
                 <Button
                   className="gallery-button"
@@ -92,7 +83,6 @@ function Gallery({ onSelectCar }) {
                 >
                   Zarezerwuj
                 </Button>
-                {""}
               </Card.Body>
             </Card>
           </Col>
@@ -127,7 +117,7 @@ function Gallery({ onSelectCar }) {
             <h4>{selectedImage.name}</h4>
           </div>
         </Modal.Body>
-        <Modal.Footer class="d-flex  flex-column justify-content-center align-items-center">
+        <Modal.Footer className="d-flex  flex-column justify-content-center align-items-center">
           <Button
             className="b-footer b-reserve"
             onClick={() => {
