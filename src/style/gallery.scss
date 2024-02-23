@@ -1,16 +1,28 @@
+$font-family-default: 'DM Serif Display', serif;
+$primary-gradient: linear-gradient(to right, #012f70, #011a3d, #0144a3);
+$secondary-gradient: linear-gradient(to right, #c3c3c3, #7a7a7a, #adadad);
+$control-bg: #0144a3;
+$footer-border-color: gold;
+$mobile-breakpoint: 576px;
+
 .container-gallery {
   margin-top: 35px;
   padding-inline: 50px;
-  font-family:'DM Serif Display', serif;
+  font-family: $font-family-default;
+
+  .box-photo:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  .gallery-button {
+    background: $primary-gradient !important;
+    margin-top: 3px;
+  }
 }
 
 .card-body-txt {
   margin-bottom: 2px;
-}
-
-.box-photo:hover {
-  cursor: pointer;
-  opacity: 0.5;
 }
 
 .modal-dialog {
@@ -23,12 +35,16 @@
   height: 85vh;
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
+
+  @media (min-width: $mobile-breakpoint) {
+    height: 95vh;
+  }
 }
 
-
-.carousel-control-next-icon, .carousel-control-prev-icon{
-  background:#0144a3;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background: $control-bg;
   padding: 15px;
   border-radius: 50px;
 }
@@ -42,33 +58,20 @@
   text-align: center;
 }
 
-.b-footer{
-  border: solid 1px gold!important;
+.b-footer {
+  border: solid 1px $footer-border-color !important;
   margin: 8px;
   width: 350px;
-}
 
-.b-footer:hover{
-  color: gold!important;
+  &:hover {
+    color: $footer-border-color !important;
+  }
 }
 
 .b-exit {
-  background:linear-gradient(to right, #c3c3c3, #7a7a7a,#adadad)!important;
-
+  background: $secondary-gradient !important;
 }
 
 .b-reserve {
-  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
-}
-
-
-.gallery-button {
-  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
-  margin-top: 3px;
-}
-
-@media (min-width: 576px) {
-  .modal-content {
-    height: 95vh;
-  }
+  background: $primary-gradient !important;
 }

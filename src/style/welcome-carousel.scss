@@ -1,21 +1,26 @@
+$hover-bg-color: rgba(240, 248, 255, 0.564);
+$tablet-up-padding: 5%;
+$large-screen-padding: 9%;
+$xlarge-screen-padding: 15%;
+
 @media only screen and (min-width: 992px) {
   .carousel-inner {
-   padding-left: 5%!important;
-   padding-right: 5%!important;
+    padding-left: $tablet-up-padding !important;
+    padding-right: $tablet-up-padding !important;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .carousel-inner {
-   padding-left: 9%!important;
-   padding-right: 9%!important;
+    padding-left: $large-screen-padding !important;
+    padding-right: $large-screen-padding !important;
   }
 }
 
 @media only screen and (min-width: 1400px) {
   .carousel-inner {
-   padding-left: 15%!important;
-   padding-right: 15%!important;
+    padding-left: $xlarge-screen-padding !important;
+    padding-right: $xlarge-screen-padding !important;
   }
 }
 
@@ -23,9 +28,7 @@
   width: auto;
 }
 
-.carousel-control-prev:hover {
-background-color: rgba(240, 248, 255, 0.564) !important
-}
+.carousel-control-prev:hover,
 .carousel-control-next:hover {
-  background-color: rgba(240, 248, 255, 0.564) !important
-  }
+  background-color: $hover-bg-color !important;
+}

@@ -1,10 +1,16 @@
-.container-photo-block {
-  background-image: url("../assets/photoBlock.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  width: auto;
-  height: 700px;
-  margin-top: 30px;
+$background-attachment-style: fixed;
+$block-height: 700px;
+$margin-top-size: 30px;
+
+#photo-block {
+  .container-photo-block {
+    background-image: url("../assets/photoBlock.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: $background-attachment-style;
+    width: auto;
+    height: $block-height;
+    margin-top: $margin-top-size;
+  }
 }

@@ -1,8 +1,12 @@
+$primary-gradient: linear-gradient(to right, #012f70, #011a3d, #0144a3);
+$font-family-default: 'DM Serif Display';
+$mobile-breakpoint: 992px; // Adjust based on your design
+
 .container-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'DM Serif Display';
+  font-family: $font-family-default;
 }
 
 h2 {
@@ -11,7 +15,7 @@ h2 {
 }
 
 .contact-button {
-  background:linear-gradient(to right, #012f70, #011a3d,#0144a3)!important;
+  background: $primary-gradient !important;
 }
 
 .contact-modal {
@@ -19,32 +23,28 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.email-sended-icon {
-  width: 420px;
-  margin: 20px;
-}
-
-.contact-modal-txt {
-  font-size: 30px;
-  text-align: center;
-}
-
-@media only screen and (max-width: 992px) {
   .email-sended-icon {
-    width: 300px;
+    width: 420px;
     margin: 20px;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      width: 300px;
+    }
   }
-  
+
   .contact-modal-txt {
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      font-size: 20px;
+    }
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: $mobile-breakpoint) {
   .container-form {
-    width: 700px!important;
+    width: 700px !important;
   }
 }

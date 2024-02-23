@@ -1,71 +1,61 @@
+$font-family-default: 'DM Serif Display', serif;
+$primary-gradient: linear-gradient(to right, #012f70, #011a3d, #0144a3);
+$circle-size: 100px;
+$text-color: white;
+$mobile-breakpoint: 768px;
+
 .instruction-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family:'DM Serif Display', serif;
+  font-family: $font-family-default;
   background-image: url(../assets/zloty-marmur.jpg);
   background-size: cover;
   background-position: center center;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
-  color: white;
-}
+  color: $text-color;
 
-.section-heading {
-  margin-top: 50px;
-}
+  .section-heading {
+    margin-top: 50px;
+  }
 
-.section-subheading{
-  margin-inline: 100px;
-}
+  .section-subheading {
+    margin-inline: 100px;
+  }
 
-.steps-row {
-  display: flex;
-  justify-content: space-evenly; 
-  align-items: center; 
-  flex-wrap: wrap; 
-  margin-bottom: 50px;
-}
-
-.step-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.step {
-  text-align: center;
-  margin: 20px 0;
-  position: relative;
-  display: flex;
-  justify-content: space-around; 
-  align-items: center; 
-  flex-direction: column;
-}
-
-.step span {
-  font-size: 60px;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.step-circle {
-  background:linear-gradient(to right, #012f70, #011a3d,#0144a3);
-  border-radius: 50%; 
-  width: 100px; 
-  height: 100px; 
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-/* Wersja mobilna */
-@media (max-width: 768px) {
   .steps-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    @media (max-width: $mobile-breakpoint) {
       flex-direction: column;
+    }
+  }
+
+  .step {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    .step-circle {
+      background: $primary-gradient;
+      border-radius: 50%;
+      width: $circle-size;
+      height: $circle-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $text-color;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
   }
 }

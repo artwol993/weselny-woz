@@ -1,38 +1,37 @@
+$font-family-default: 'DM Serif Display', serif;
+$text-color-light: #FFFFFF;
+$mobile-breakpoint: 576px;
+
 .box {
   width: 130px;
   height: 110px;
   padding: 5px;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    height: 70px;
+  }
 }
 
 .logo {
   opacity: 1;
   height: auto;
-  transition: opacity 0.3s ease-in-out, height 1s ease-in-out; 
+  transition: opacity 0.3s ease-in-out, height 1s ease-in-out;
 }
 
 .logo-icon {
   height: 100px;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    height: 75px;
+  }
 }
 
 .logo-tittle {
-  color: #FFFFFF;
+  color: $text-color-light;
   font-size: 25px;
-  font-family: 'DM Serif Display', serif;
-}
+  font-family: $font-family-default;
 
-@media only screen and (max-width: 576px) {
-
-  .box {
-    height: 70px;
-  }
-
-
-  .logo-icon {
-    height: 75px;
-  }
-
-  .logo-tittle {
+  @media only screen and (max-width: $mobile-breakpoint) {
     font-size: 20px;
   }
-
 }

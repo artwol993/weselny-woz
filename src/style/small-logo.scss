@@ -1,21 +1,28 @@
+$font-family-default: 'DM Serif Display', serif;
+$text-color: #FFFFFF;
+$box-width: 100px;
+$box-height: 45px;
+$icon-height: 55px;
+$title-font-size: 15px;
+
 .box-sm {
-  width: 100px;
-  height: 45px;
+  width: $box-width;
+  height: $box-height;
   padding: 5px;
   margin-bottom: 10px;
+
+  .logo-icon-sm {
+    height: $icon-height;
+  }
+
+  .logo-tittle-sm {
+    color: $text-color;
+    font-size: $title-font-size;
+    font-family: $font-family-default;
+  }
 }
 
 .small-logo {
   opacity: 0;
   height: 0; 
-}
-
-.logo-icon-sm {
-  height: 55px;
-}
-
-.logo-tittle-sm {
-  color: #FFFFFF;
-  font-size: 15px;
-  font-family: 'DM Serif Display', serif;
 }
