@@ -1,46 +1,42 @@
-@import '~bootstrap/scss/bootstrap'; // Import Bootstrap's Sass
-
-$primary-color: #012f70;
-$secondary-color: #011a3d;
-$accent-color: #0144a3;
+$navbar-gradient: linear-gradient(to right, #012f70, #011a3d, #0144a3);
+$font-family-default: 'DM Serif Display', serif;
+$link-color: white;
+$link-hover-color: gold;
+$navbar-toggler-border-color: gold;
+$navbar-height-reduced: 60px;
+$container-width: 90%;
 
 .navbar {
-  background: linear-gradient(to right, $primary-color, $secondary-color, $accent-color);
-  font-family: 'DM Serif Display', serif;
-  position: sticky!important;
+  background: $navbar-gradient;
+  font-family: $font-family-default;
+  position: sticky !important;
   top: 0;
   width: 100%;
   z-index: 1000;
 
   &.reduced {
-    height: 60px;
+    height: $navbar-height-reduced;
   }
 
   .container {
-    width: 90%;
+    width: $container-width;
   }
 
   .nav-link {
-    color: white;
+    color: $link-color;
     font-size: 20px;
-    transition: color 0.2s ease; // Smooth transition for hover effect
-  
+
     &:hover {
-      color: gold;
-    }
-  
-    &.active {
-      color: gold; // Kolor dla aktywnego linku
-      font-weight: bold; // Dodatkowy styl dla aktywnego linku
+      color: $link-hover-color;
     }
   }
 
   .navbar-toggler-custom {
-    border-color: gold;
-  }
+    border-color: $navbar-toggler-border-color !important;
 
-  .navbar-toggler-custom .navbar-toggler-icon {
-    color: gold;
+    .navbar-toggler-icon {
+      color: $link-hover-color;
+    }
   }
 
   .navbar-nav {
@@ -50,10 +46,10 @@ $accent-color: #0144a3;
   .navbar-collapse {
     justify-content: center;
     align-items: center;
-  }
 
-  .navbar-collapse .nav-link {
-    margin: 5px 20px;
+    .nav-link {
+      margin: 5px 20px;
+    }
   }
 
   .box {
