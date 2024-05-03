@@ -1,0 +1,61 @@
+$footer-background: linear-gradient(to right, #012f70, #011a3d, #0144a3);
+$text-color-light: #FFEAEA;
+$link-color: white;
+$link-hover-color: gold;
+$mobile-breakpoint: 576px;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $text-color-light;
+  background: $footer-background;
+  padding: 1em;
+
+  a {
+    text-decoration: none;
+    color: $link-color;
+
+    &:hover {
+      text-decoration: none;
+      color: $link-hover-color;
+    }
+
+    &.footer-link {
+      margin: 3px;
+      font-size: 23px;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+
+    &.footer-social-link {
+      font-size: 3em;
+
+      &:hover {
+        filter: blur(1px);
+      }
+    }
+  }
+
+  .phone-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-phone {
+    margin-left: 25px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    .footer-link {
+      font-size: 16px;
+    }
+
+    .footer-social-link {
+      font-size: 2em;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+$font-family-default: 'DM Serif Display', serif;
+$mobile-breakpoint: 576px;
+$tablet-up-breakpoint: 992px;
+
+.container-about-us {
+  height: 620px;
+  text-align: center;
+  font-family: $font-family-default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    
+    .about-us-txt {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  }
+
+  @media only screen and (min-width: $tablet-up-breakpoint) {
+    width: 900px!important;
+    height: 500px;
+  }
+}
+
+.about-us-txt {
+  font-size: 20px;
+}

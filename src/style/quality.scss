@@ -1,0 +1,40 @@
+$font-family-default: 'DM Serif Display', serif;
+$background-color-circle: rgba(255, 255, 255, 0.846);
+$circle-size: 150px;
+$hover-scale: 1.1;
+$box-shadow-hover: 0px 0px 15px rgba(0, 0, 0, 0.2);
+$text-decoration-tittle: double gold;
+
+.quality-container {
+  background-image: url("../assets/qualityTheme.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: $font-family-default;
+
+  .box-circle {
+    width: $circle-size;
+    height: $circle-size;
+    background-color: $background-color-circle;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:hover {
+      transform: scale($hover-scale);
+      box-shadow: $box-shadow-hover;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+  }
+
+  .quality-icon {
+    width: $circle-size;
+    height: $circle-size;
+  }
+
+  .tittle {
+    text-decoration: $text-decoration-tittle;
+  }
+}

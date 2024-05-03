@@ -1,0 +1,63 @@
+$navbar-gradient: linear-gradient(to right, #012f70, #011a3d, #0144a3);
+$font-family-default: 'DM Serif Display', serif;
+$link-color: white;
+$link-hover-color: gold;
+$navbar-toggler-border-color: gold;
+$navbar-height-reduced: 60px;
+$container-width: 90%;
+
+.navbar {
+  background: $navbar-gradient;
+  font-family: $font-family-default;
+  position: sticky !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  &.reduced {
+    height: $navbar-height-reduced;
+  }
+
+  .container {
+    width: $container-width;
+  }
+
+  .nav-link {
+    color: $link-color;
+    font-size: 20px;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  .navbar-toggler-custom {
+    border-color: $navbar-toggler-border-color !important;
+
+    .navbar-toggler-icon {
+      color: $link-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+    align-items: center;
+
+    .nav-link {
+      margin: 5px 20px;
+    }
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+  }
+
+  .small-logo {
+    opacity: 0.5;
+  }
+}

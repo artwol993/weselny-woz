@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/header.css";
+import "../style/header.scss";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";

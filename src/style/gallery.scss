@@ -1,0 +1,77 @@
+$font-family-default: 'DM Serif Display', serif;
+$primary-gradient: linear-gradient(to right, #012f70, #011a3d, #0144a3);
+$secondary-gradient: linear-gradient(to right, #c3c3c3, #7a7a7a, #adadad);
+$control-bg: #0144a3;
+$footer-border-color: gold;
+$mobile-breakpoint: 576px;
+
+.container-gallery {
+  margin-top: 35px;
+  padding-inline: 50px;
+  font-family: $font-family-default;
+
+  .box-photo:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  .gallery-button {
+    background: $primary-gradient !important;
+    margin-top: 3px;
+  }
+}
+
+.card-body-txt {
+  margin-bottom: 2px;
+}
+
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @media (min-width: $mobile-breakpoint) {
+    height: 95vh;
+  }
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background: $control-bg;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.modal-body {
+  overflow-y: auto;
+}
+
+.modal-text {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.b-footer {
+  border: solid 1px $footer-border-color !important;
+  margin: 8px;
+  width: 350px;
+
+  &:hover {
+    color: $footer-border-color !important;
+  }
+}
+
+.b-exit {
+  background: $secondary-gradient !important;
+}
+
+.b-reserve {
+  background: $primary-gradient !important;
+}

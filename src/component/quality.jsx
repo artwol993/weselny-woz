@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/quality.css";
+import "../style/quality.scss";
 import qualityCar from "../assets/qualityCar.png";
 import qualityTeam from "../assets/qualityTeam.png";
 import qualityProffesional from "../assets/qualityProffesional.png";

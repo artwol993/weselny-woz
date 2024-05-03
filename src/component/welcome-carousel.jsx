@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import "../style/welcome-carousel.css";
+import "../style/welcome-carousel.scss";
 import WelcomeCars from "./carousel-data";
 
 function WelcomeCarousel() {
