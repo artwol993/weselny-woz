@@ -22,8 +22,6 @@
 
 
 @include for-tablet-up {
-
-
   .about-us-box {
     width: 600px;
   }
@@ -31,7 +29,6 @@
   .about-us-txt {
     font-size: $font-size-medium;
   }
-
 }
 
 @include for-desktop {
