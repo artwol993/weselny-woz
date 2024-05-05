@@ -20,6 +20,24 @@ function Quality() {
     },
   };
 
+  const cardVariants1 = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
+
+  const cardVariants2 = {
+    hidden: { opacity: 0, y: 150 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
+
   return (
     <section id="quality" className="quality-container p-5">
       <Container>
@@ -54,7 +72,7 @@ function Quality() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={cardVariants}
+              variants={cardVariants1}
             >
               <Card.Body className=" text-center d-flex flex-column justify-content-center align-items-center">
                 <div className="mb-2 box-circle">
@@ -77,7 +95,7 @@ function Quality() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              variants={cardVariants}
+              variants={cardVariants2}
             >
               <Card.Body className=" text-center d-flex flex-column justify-content-center align-items-center">
                 <div className="mb-2 box-circle">
