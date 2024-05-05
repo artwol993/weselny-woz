@@ -8,13 +8,30 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
+import { motion } from "framer-motion";
+
 function Quality() {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
+
   return (
     <section id="quality" className="quality-container p-5">
       <Container>
         <Row className="text-center g-4">
           <Col md>
-            <div className=" text-white adv-card">
+            <motion.div
+              className=" text-white adv-card"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+            >
               <Card.Body className=" text-center d-flex flex-column justify-content-center align-items-center">
                 <div className="mb-2 box-circle">
                   <img className="quality-icon" src={qualityCar} alt="dos" />
@@ -29,10 +46,16 @@ function Quality() {
                   charakter tego ważnego dnia.
                 </Card.Text>
               </Card.Body>
-            </div>
+            </motion.div>
           </Col>
           <Col md>
-            <div className=" text-white adv-card">
+            <motion.div
+              className=" text-white adv-card"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+            >
               <Card.Body className=" text-center d-flex flex-column justify-content-center align-items-center">
                 <div className="mb-2 box-circle">
                   <img className="quality-icon" src={qualityTeam} alt="dos" />
@@ -46,10 +69,16 @@ function Quality() {
                   zrealizowany z pasją.
                 </Card.Text>
               </Card.Body>
-            </div>
+            </motion.div>
           </Col>
           <Col md>
-            <div className=" text-white adv-card">
+            <motion.div
+              className=" text-white adv-card"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+            >
               <Card.Body className=" text-center d-flex flex-column justify-content-center align-items-center">
                 <div className="mb-2 box-circle">
                   <img
@@ -69,7 +98,7 @@ function Quality() {
                   komfortu podczas jazdy.
                 </Card.Text>
               </Card.Body>
-            </div>
+            </motion.div>
           </Col>
         </Row>
       </Container>
