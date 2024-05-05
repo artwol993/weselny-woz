@@ -16,7 +16,7 @@ function Contact({ selectedCar, onCarSelect }) {
   const {
     register,
     handleSubmit,
-    reset, // Dodaj reset do importów
+    reset, 
     formState: { errors },
   } = useForm();
 

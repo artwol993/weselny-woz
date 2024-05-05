@@ -32,7 +32,8 @@ function Terms() {
           className="terms-item"
           variants={itemVariantsLeft}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <p className="terms-item-title">100 km od Łukowa w cenie!</p>
           <p>Zacznij swoją podróż bez dodatkowych kosztów.</p>
@@ -41,7 +42,8 @@ function Terms() {
           className="terms-item"
           variants={itemVariantsRight}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <p className="terms-item-title">Pierwsze 5 godzin za darmo</p>
           <p>Potrzebujesz więcej czasu? Zaproponujemy Ci korzystną ofertę.</p>
@@ -50,7 +52,8 @@ function Terms() {
           className="terms-item"
           variants={itemVariantsLeft}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <p className="terms-item-title">Profesjonalizm za kierownicą</p>
           <p>
@@ -62,7 +65,8 @@ function Terms() {
           className="terms-item"
           variants={itemVariantsRight}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <p className="terms-item-title">Elastyczny zasięg</p>
           <p>Obsługujemy tereny w promieniu aż 150 km od Łukowa.</p>
@@ -71,7 +75,8 @@ function Terms() {
           className="terms-item"
           variants={itemVariantsLeft}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <p className="terms-item-title">Chcesz unikalne dekoracje?</p>
           <p>
