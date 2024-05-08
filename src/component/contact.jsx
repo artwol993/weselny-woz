@@ -63,18 +63,18 @@ function Contact({ selectedCar, onCarSelect }) {
 
   return (
     <>
-      <section id="contact">
+      <section id="contact-section">
         <Container className="my-5 ">
           <Form
             onSubmit={handleSubmit(sendEmail)}
             action="https://api.emailjs.com/api/v1.0/email/send"
             method="POST"
           >
-            <div className="container-contact">
-              <div className="container-form">
-                <h2> Zapytaj o termin</h2>
-
+            <div className="contact-container">
+              <div className="contact-form">
+                <h2 className="contact-header"> Zapytaj o termin</h2>
                 <motion.div
+                  className=""
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -104,7 +104,7 @@ function Contact({ selectedCar, onCarSelect }) {
                       <Form.Control
                         type="date"
                         name="date"
-                        min={new Date().toISOString().split("T")[0]} // Ustawia minimum na dzisiejszą datę
+                        min={new Date().toISOString().split("T")[0]}
                         {...register("date", { required: "Podaj datę" })}
                       />
                       {errors.date && <p>{errors.date.message}</p>}
