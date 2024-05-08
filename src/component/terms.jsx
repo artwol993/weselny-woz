@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function Terms() {
   const itemVariantsLeft = {
-    hidden: { opacity: 0, x: -250 },
+    hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1,
       x: 0,
@@ -14,7 +14,7 @@ function Terms() {
     },
   };
   const itemVariantsRight = {
-    hidden: { opacity: 0, x: 250 },
+    hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
       x: 0,

@@ -71,7 +71,7 @@ function Gallery({ onSelectCar }) {
                 <Card.Title>{car.name}</Card.Title>
                 <Card.Text>
                   Cena: {car.price}
-                  Rok: {car.year}
+                  Rok produkcji: {car.year}
                   Silnik: {car.engine}
                 </Card.Text>
                 <Button
