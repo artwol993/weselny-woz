@@ -8,6 +8,8 @@ import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 
+import { motion } from "framer-motion";
+
 function Gallery({ onSelectCar }) {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
@@ -40,6 +42,15 @@ function Gallery({ onSelectCar }) {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
+
   return (
     <section id="gallery" className="container-gallery">
       <h2> Wybierz auto</h2>
@@ -51,40 +62,47 @@ function Gallery({ onSelectCar }) {
       <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4">
         {Cars.map((car) => (
           <Col key={car.id}>
-            <Card>
-              <Card.Img
-                className="box-photo"
-                variant="top"
-                src={car.image}
-                alt={car.name}
-                onClick={() =>
-                  handleImageClick(
-                    car.image,
-                    car.gallery,
-                    car.name,
-                    car.year,
-                    car.engine
-                  )
-                }
-              />
-              <Card.Body>
-                <Card.Title>{car.name}</Card.Title>
-                <Card.Text>
-                  Cena: {car.price}
-                  Rok produkcji: {car.year}
-                  Silnik: {car.engine}
-                </Card.Text>
-                <Button
-                  className="gallery-button"
-                  onClick={() => {
-                    handleSelectCar(car.name);
-                    scrollToContact();
-                  }}
-                >
-                  Zarezerwuj
-                </Button>
-              </Card.Body>
-            </Card>
+            <motion.div
+              className="Card"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={containerVariants}
+              key={car.id}
+            >
+              <Card>
+                <Card.Img
+                  className="box-photo"
+                  variant="top"
+                  src={car.image}
+                  alt={car.name}
+                  onClick={() =>
+                    handleImageClick(
+                      car.image,
+                      car.gallery,
+                      car.name,
+                      car.year,
+                      car.engine
+                    )
+                  }
+                />
+                <Card.Body>
+                  <Card.Title>{car.name}</Card.Title>
+                  <Card.Text>Cena: {car.price}</Card.Text>
+                  <Card.Text>Rok produkcji: {car.year}</Card.Text>
+                  <Card.Text>Silnik: {car.engine}</Card.Text>
+                  <Button
+                    className="gallery-button"
+                    onClick={() => {
+                      handleSelectCar(car.name);
+                      scrollToContact();
+                    }}
+                  >
+                    Zarezerwuj
+                  </Button>
+                </Card.Body>
+              </Card>
+            </motion.div>
           </Col>
         ))}
       </Row>
