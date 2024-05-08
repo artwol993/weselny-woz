@@ -1,39 +1,36 @@
-$font-family-default: 'DM Serif Display', serif;
-$primary-gradient: linear-gradient(to right, #012f70, #011a3d, #0144a3);
-$circle-size: 100px;
-$text-color: white;
-$mobile-breakpoint: 768px;
+@import './config/colors';
+@import './config/fonts';
+@import './config/breakpoints';
 
 .instruction-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: $font-family-default;
+  font-family: $f-main-regular;
   background-image: url(../assets/zloty-marmur.jpg);
   background-size: cover;
   background-position: center center;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
-  color: $text-color;
+  color: $c-white;
 
   .section-heading {
     margin-top: 50px;
+    color: $c-white;
   }
 
   .section-subheading {
     margin-inline: 100px;
+    color: $c-white;
   }
 
   .steps-row {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 50px;
-
-    @media (max-width: $mobile-breakpoint) {
-      flex-direction: column;
-    }
   }
 
   .step {
@@ -46,16 +43,27 @@ $mobile-breakpoint: 768px;
     flex-direction: column;
 
     .step-circle {
-      background: $primary-gradient;
+      background: $c-theme;
       border-radius: 50%;
-      width: $circle-size;
-      height: $circle-size;
+      width: 100px;
+      height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $text-color;
+      color: $c-white;
       font-size: 30px;
       margin-bottom: 10px;
     }
   }
+
+  @include for-tablet-up {
+    .steps-row {
+        flex-direction: row;
+      }
+    }
 }
+
+
+
+
+

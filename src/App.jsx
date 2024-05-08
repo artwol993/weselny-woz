@@ -4,7 +4,7 @@ import Header from "./component/header";
 import Footer from "./component/footer";
 import Body from "./component/body";
 
-import "./style/App.scss";
+import "./style/config/main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {

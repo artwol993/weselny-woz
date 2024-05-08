@@ -12,11 +12,13 @@ import Modal from "react-bootstrap/Modal";
 import Cars from "./gallery-data";
 import emailSended from "../assets/emailSended.jpg";
 
+import { motion } from "framer-motion";
+
 function Contact({ selectedCar, onCarSelect }) {
   const {
     register,
     handleSubmit,
-    reset, // Dodaj reset do importów
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -37,9 +39,7 @@ function Contact({ selectedCar, onCarSelect }) {
         (response) => {
           console.log("Email sent successfully: ", response);
           setShowConfirmationModal(true);
-          // Zresetuj formularz po udanym wysłaniu wiadomości
-          reset(); // Wykorzystaj funkcję reset do zresetowania formularza
-          // Zamknij modal po 3 sekundach (możesz dostosować ten czas)
+          reset();
           setTimeout(() => {
             setShowConfirmationModal(false);
           }, 3000);
@@ -51,6 +51,15 @@ function Contact({ selectedCar, onCarSelect }) {
   };
 
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
 
   return (
     <>
@@ -64,143 +73,151 @@ function Contact({ selectedCar, onCarSelect }) {
             <div className="container-contact">
               <div className="container-form">
                 <h2> Zapytaj o termin</h2>
-                <Row className="mb-3">
-                  <Form.Group as={Col} controlId="formGridState">
-                    <FloatingLabel>Auto</FloatingLabel>
-                    <Form.Select
-                      {...register("car", { required: "Wybierz auto" })}
-                      value={selectedCar || " "}
-                      onChange={handleCarSelect}
-                      name="car"
-                    >
-                      <option value="">Wybierz auto...</option>
-                      {Cars.map((car) => (
-                        <option key={car.id} value={car.name}>
-                          {car.name}
-                        </option>
-                      ))}
-                    </Form.Select>
-                    {errors.car && <p>{errors.car.message}</p>}
-                  </Form.Group>
 
-                  <Form.Group as={Col} controlId="formGridState">
-                    <FloatingLabel>Termin</FloatingLabel>
-                    <Form.Control
-                      type="date"
-                      name="date"
-                      min={new Date().toISOString().split("T")[0]} // Ustawia minimum na dzisiejszą datę
-                      {...register("date", { required: "Podaj datę" })}
-                    />
-                    {errors.date && <p>{errors.date.message}</p>}
-                  </Form.Group>
-                </Row>
-                <Row className="mb-3">
-                  <Form.Group as={Col} controlId="city-name">
-                    <FloatingLabel controlId="city" label="Miejscowość">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={containerVariants}
+                >
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridState">
+                      <FloatingLabel>Auto</FloatingLabel>
+                      <Form.Select
+                        {...register("car", { required: "Wybierz auto" })}
+                        value={selectedCar || " "}
+                        onChange={handleCarSelect}
+                        name="car"
+                      >
+                        <option value="">Wybierz auto...</option>
+                        {Cars.map((car) => (
+                          <option key={car.id} value={car.name}>
+                            {car.name}
+                          </option>
+                        ))}
+                      </Form.Select>
+                      {errors.car && <p>{errors.car.message}</p>}
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridState">
+                      <FloatingLabel>Termin</FloatingLabel>
                       <Form.Control
-                        type="city"
-                        name="city"
-                        {...register("city", {
-                          required: "Podaj nazwę miejscowości",
-                        })}
+                        type="date"
+                        name="date"
+                        min={new Date().toISOString().split("T")[0]} // Ustawia minimum na dzisiejszą datę
+                        {...register("date", { required: "Podaj datę" })}
                       />
-                    </FloatingLabel>
-                    {errors.city && <p>{errors.city.message}</p>}
-                  </Form.Group>
+                      {errors.date && <p>{errors.date.message}</p>}
+                    </Form.Group>
+                  </Row>
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="city-name">
+                      <FloatingLabel controlId="city" label="Miejscowość">
+                        <Form.Control
+                          type="city"
+                          name="city"
+                          {...register("city", {
+                            required: "Podaj nazwę miejscowości",
+                          })}
+                        />
+                      </FloatingLabel>
+                      {errors.city && <p>{errors.city.message}</p>}
+                    </Form.Group>
 
-                  <Form.Group as={Col} controlId="city-zip">
-                    <FloatingLabel controlId="formZip" label="Kod pocztowy">
+                    <Form.Group as={Col} controlId="city-zip">
+                      <FloatingLabel controlId="formZip" label="Kod pocztowy">
+                        <Form.Control
+                          type="city-zip"
+                          name="city-zip"
+                          {...register("zip", {
+                            required: "Podaj kod pocztowy",
+                            pattern: {
+                              value: /^[0-9]{2}-[0-9]{3}$/,
+                              message: "Błędny kod pocztowy",
+                            },
+                          })}
+                        />
+                      </FloatingLabel>
+                      {errors.zip && <p>{errors.zip.message}</p>}
+                    </Form.Group>
+                  </Row>
+
+                  <Form.Group as={Col} controlId="user-name" className="mb-3">
+                    <FloatingLabel controlId="floatingInput" label="Imię">
                       <Form.Control
-                        type="city-zip"
-                        name="city-zip"
-                        {...register("zip", {
-                          required: "Podaj kod pocztowy",
+                        type="name"
+                        name="name"
+                        {...register("name", {
+                          required: "Podaj imię",
                           pattern: {
-                            value: /^[0-9]{2}-[0-9]{3}$/,
-                            message: "Błędny kod pocztowy",
+                            value: /^[A-Za-z ]+$/,
+                            message: "Błędne imie",
                           },
                         })}
                       />
                     </FloatingLabel>
-                    {errors.zip && <p>{errors.zip.message}</p>}
+                    {errors.name && <p>{errors.name.message}</p>}
                   </Form.Group>
-                </Row>
 
-                <Form.Group as={Col} controlId="user-name" className="mb-3">
-                  <FloatingLabel controlId="floatingInput" label="Imię">
+                  <Form.Group as={Col} controlId="user-email" className="mb-3">
+                    <FloatingLabel controlId="floatingInput" label="Email">
+                      <Form.Control
+                        type="email"
+                        name="email"
+                        {...register("email", {
+                          required: "Podaj Email",
+                          pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                            message: "Błędny email",
+                          },
+                        })}
+                      />
+                    </FloatingLabel>
+                    {errors.email && <p>{errors.email.message}</p>}
+                  </Form.Group>
+
+                  <Form.Group as={Col} controlId="user-phone" className="mb-3">
+                    <FloatingLabel controlId="floatingInput" label="Telefon">
+                      <Form.Control
+                        type="phone"
+                        name="phone"
+                        {...register("phone", {
+                          required: "Podaj Numer telefonu",
+                          pattern: {
+                            value: /^(?:\+\d{2})?\d{9}$/,
+                            message: "Błędny numer telefonu",
+                          },
+                        })}
+                      />
+                    </FloatingLabel>
+                    {errors.phone && <p>{errors.phone.message}</p>}
+                  </Form.Group>
+
+                  <FloatingLabel
+                    controlId="floatingTextarea2"
+                    label="Dodatkowe informacje"
+                  >
                     <Form.Control
-                      type="name"
-                      name="name"
-                      {...register("name", {
-                        required: "Podaj imię",
-                        pattern: {
-                          value: /^[A-Za-z ]+$/,
-                          message: "Błędne imie",
+                      as="textarea"
+                      name="comment"
+                      placeholder="Zostaw komentarz"
+                      style={{ height: "200px" }}
+                      {...register("comment", {
+                        maxLength: {
+                          value: 500,
+                          message: "Przekroczyłeś maksymalną ilość znaków",
                         },
                       })}
                     />
                   </FloatingLabel>
-                  {errors.name && <p>{errors.name.message}</p>}
-                </Form.Group>
+                  {errors.comment && <p>{errors.comment.message}</p>}
 
-                <Form.Group as={Col} controlId="user-email" className="mb-3">
-                  <FloatingLabel controlId="floatingInput" label="Email">
-                    <Form.Control
-                      type="email"
-                      name="email"
-                      {...register("email", {
-                        required: "Podaj Email",
-                        pattern: {
-                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                          message: "Błędny email",
-                        },
-                      })}
-                    />
-                  </FloatingLabel>
-                  {errors.email && <p>{errors.email.message}</p>}
-                </Form.Group>
-
-                <Form.Group as={Col} controlId="user-phone" className="mb-3">
-                  <FloatingLabel controlId="floatingInput" label="Telefon">
-                    <Form.Control
-                      type="phone"
-                      name="phone"
-                      {...register("phone", {
-                        required: "Podaj Numer telefonu",
-                        pattern: {
-                          value: /^(?:\+\d{2})?\d{9}$/,
-                          message: "Błędny numer telefonu",
-                        },
-                      })}
-                    />
-                  </FloatingLabel>
-                  {errors.phone && <p>{errors.phone.message}</p>}
-                </Form.Group>
-
-                <FloatingLabel
-                  controlId="floatingTextarea2"
-                  label="Dodatkowe informacje"
-                >
-                  <Form.Control
-                    as="textarea"
-                    name="comment"
-                    placeholder="Zostaw komentarz"
-                    style={{ height: "200px" }}
-                    {...register("comment", {
-                      maxLength: {
-                        value: 500,
-                        message: "Przekroczyłeś maksymalną ilość znaków",
-                      },
-                    })}
-                  />
-                </FloatingLabel>
-                {errors.comment && <p>{errors.comment.message}</p>}
-
-                <div className="d-grid gap-2 m-3">
-                  <Button size="lg" type="submit" className="contact-button">
-                    Proszę o wycenę
-                  </Button>
-                </div>
+                  <div className="d-grid gap-2 m-3">
+                    <Button size="lg" type="submit" className="contact-button">
+                      Proszę o wycenę
+                    </Button>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </Form>

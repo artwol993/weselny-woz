@@ -1,29 +1,48 @@
-$font-family-default: 'DM Serif Display', serif;
-$mobile-breakpoint: 576px;
-$tablet-up-breakpoint: 992px;
+@import './config/colors';
+@import './config/fonts';
+@import './config/breakpoints';
+
 
 .container-about-us {
-  height: 620px;
+  margin: 30px;
   text-align: center;
-  font-family: $font-family-default;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-  @media only screen and (max-width: $mobile-breakpoint) {
-    
-    .about-us-txt {
-      font-size: 15px;
-      margin-top: 10px;
-    }
-  }
-
-  @media only screen and (min-width: $tablet-up-breakpoint) {
-    width: 900px!important;
-    height: 500px;
-  }
+.about-us-box {
+  width: 350px;
 }
 
 .about-us-txt {
-  font-size: 20px;
+  font-size: $f-main-medium;
+}
+
+
+@include for-tablet-up {
+  .about-us-box {
+    width: 600px;
+  }
+
+  .about-us-txt {
+    font-size: $font-size-medium;
+  }
+}
+
+@include for-desktop {
+  .about-us-box {
+    width: 900px;
+  }
+}
+
+@include for-wide-desktop {
+  .about-us-box {
+    width:1200px;
+  }
+
+  .about-us-txt {
+    font-size: $font-size-large;
+  }
 }

@@ -11,7 +11,7 @@ const Cars = [
       "images/s-4.jpg",
       "images/s-5.jpg",
     ],
-    year: "Rok produkcji: 2023",
+    year: "2023",
     engine: "3.0 330hp",
   },
   {
@@ -21,7 +21,7 @@ const Cars = [
     category: "sport",
     price: "1600pln",
     gallery: ["images/p-2.jpg", "images/p-3.jpg", "images/p-4.jpg"],
-    year: "Rok produkcji: 2022",
+    year: "2022",
     engine: "2.0 V6 258hp",
   },
   {
@@ -31,7 +31,7 @@ const Cars = [
     category: "limousine",
     price: "1500pln",
     gallery: ["images/a6-2.jpg", "images/a6-3.jpg", "images/a6-4.jpg"],
-    year: "Rok produkcji: 2023",
+    year: "2023",
     engine: "3.0 50 TDI 286hp",
   },
   {
@@ -45,7 +45,7 @@ const Cars = [
       "images/aq8-4.jpg",
       "images/aq8-5.jpg",
     ],
-    year: "Rok produkcji: 2020",
+    year: "2020",
     engine: "3.0 50 TDI 286hp",
   },
   {
@@ -59,7 +59,7 @@ const Cars = [
       "images/rs6-4.jpg",
       "images/rs6-5.jpg",
     ],
-    year: "Rok produkcji: 2022",
+    year: "2022",
     engine: "4.0 TFSI 600hp",
   },
   {
@@ -68,7 +68,7 @@ const Cars = [
     name: "Mercedes GLE Coupe",
     price: "1600pln",
     gallery: ["images/gle-2.jpg", "images/gle-3.jpg", "images/gle-4.jpg"],
-    year: "Rok produkcji: 2020",
+    year: "2020",
     engine: "4.0 350d 330hp",
   },
 ];

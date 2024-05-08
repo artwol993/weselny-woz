@@ -1,14 +1,10 @@
-$font-family-default: 'DM Serif Display', serif;
-$primary-gradient: linear-gradient(to right, #012f70, #011a3d, #0144a3);
-$secondary-gradient: linear-gradient(to right, #c3c3c3, #7a7a7a, #adadad);
-$control-bg: #0144a3;
-$footer-border-color: gold;
-$mobile-breakpoint: 576px;
+@import './config/colors';
+@import './config/fonts';
+@import './config/breakpoints';
 
 .container-gallery {
   margin-top: 35px;
   padding-inline: 50px;
-  font-family: $font-family-default;
 
   .box-photo:hover {
     cursor: pointer;
@@ -16,7 +12,7 @@ $mobile-breakpoint: 576px;
   }
 
   .gallery-button {
-    background: $primary-gradient !important;
+    background: $c-theme !important;
     margin-top: 3px;
   }
 }
@@ -36,15 +32,11 @@ $mobile-breakpoint: 576px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
-  @media (min-width: $mobile-breakpoint) {
-    height: 95vh;
-  }
 }
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
-  background: $control-bg;
+  background: #0144a3;
   padding: 15px;
   border-radius: 50px;
 }
@@ -59,12 +51,12 @@ $mobile-breakpoint: 576px;
 }
 
 .b-footer {
-  border: solid 1px $footer-border-color !important;
+  border: solid 1px $c-accent !important;
   margin: 8px;
   width: 350px;
 
   &:hover {
-    color: $footer-border-color !important;
+    color: $c-accent !important;
   }
 }
 
@@ -73,5 +65,12 @@ $mobile-breakpoint: 576px;
 }
 
 .b-reserve {
-  background: $primary-gradient !important;
+  background: $c-theme !important;
+}
+
+
+@include for-tablet-up {
+  .modal-content {
+    height: 95vh;
+  }
 }

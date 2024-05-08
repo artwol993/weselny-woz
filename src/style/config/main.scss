@@ -1,0 +1,54 @@
+
+@import './breakpoints';
+@import './colors.scss';
+@import './fonts';
+
+
+@import '../about-us.scss';
+@import '../banner.scss';
+@import '../contact.scss';
+@import '../footer.scss';
+@import '../gallery.scss';
+@import '../header.scss';
+@import '../instruction.scss';
+@import '../logo.scss';
+@import '../photo-block.scss';
+@import '../quality.scss';
+@import '../terms.scss';
+@import '../welcome-carousel.scss';
+
+h1 {
+  font-family: $f-main-bold; 
+  color: $c-accent; 
+  font-size: $header-size-large; 
+}
+
+h2 {
+  font-family: $f-main-medium; 
+  color: $c-accent; 
+  font-size:$header-size-semi-large; 
+}
+
+h3 {
+  font-family: $f-main-bold; 
+  color: $c-accent; 
+  font-size: $header-size-medium; 
+}
+
+h4 {
+  font-family: $f-main-bold;
+  color: $c-accent; 
+  font-size: $header-size-small; 
+}
+
+h5 {
+  font-family: $f-main-medium; 
+  color: $c-accent; 
+  font-size: $font-size-medium; 
+}
+
+p {
+  font-family: $f-main-medium;
+  color: $c-primary; 
+  font-size: $font-size-medium; 
+}
