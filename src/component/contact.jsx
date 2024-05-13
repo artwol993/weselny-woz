@@ -63,7 +63,7 @@ function Contact({ selectedCar, onCarSelect }) {
 
   return (
     <>
-      <section id="contact-section">
+      <section id="contact">
         <Container className="my-5 ">
           <Form
             onSubmit={handleSubmit(sendEmail)}
