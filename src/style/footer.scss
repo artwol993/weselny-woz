@@ -1,25 +1,24 @@
-$footer-background: linear-gradient(to right, #012f70, #011a3d, #0144a3);
-$text-color-light: #FFEAEA;
-$link-color: white;
-$link-hover-color: gold;
-$mobile-breakpoint: 576px;
+@import './config/colors';
+@import './config/fonts';
+@import './config/breakpoints';
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: $text-color-light;
-  background: $footer-background;
+  color: $c-white;
+  background: $c-theme;
   padding: 1em;
 
-  a {
+  .footer-link {
     text-decoration: none;
-    color: $link-color;
+    color: $c-white;
+    font-size: $font-size-small;
 
     &:hover {
       text-decoration: none;
-      color: $link-hover-color;
+      color: $c-accent;
     }
 
     &.footer-link {
@@ -27,7 +26,7 @@ $mobile-breakpoint: 576px;
       font-size: 23px;
 
       &:hover {
-        color: $link-hover-color;
+        color: $c-accent;
       }
     }
 
@@ -48,14 +47,15 @@ $mobile-breakpoint: 576px;
   .footer-phone {
     margin-left: 25px;
   }
+}
 
-  @media (max-width: $mobile-breakpoint) {
-    .footer-link {
-      font-size: 16px;
-    }
 
-    .footer-social-link {
-      font-size: 2em;
-    }
+@include for-tablet-up {
+  .footer-link {
+    font-size: $font-size-medium;
+  }
+
+  .footer-social-link {
+    font-size: 2em;
   }
 }
