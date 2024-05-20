@@ -11,7 +11,7 @@ function Footer() {
     <>
       <section className="footer" id="footer">
         <Container fluid>
-          <p className="h1 mb-4">Skontaktuj się z nami</p>
+          <h2 className="h1 mb-4">Skontaktuj się z nami</h2>
           <Container className="footer-container-contact">
             <Col>
               <Row className="mb-2">
