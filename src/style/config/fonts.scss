@@ -1,16 +1,8 @@
 
 
-$f-main-light: 'DM Serif Display', serif; // (waga: 300)
-$f-main-regular: 'DM Serif Display', serif; // (waga: normal/400)
-$f-main-medium: 'DM Serif Display', serif; // (waga: 500)
-$f-main-semi-bold: 'DM Serif Display', serif; // (waga: 600)
-$f-main-bold: 'DM Serif Display', serif; // (waga: bold/700)
+$f-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-$f-accent-light: 'DM Serif Display', serif; // (waga: 300)
-$f-accent-regular: 'DM Serif Display', serif; // (waga: normal/400)
-$f-accent-medium: 'DM Serif Display', serif; // (waga: 500)
-$f-accent-semi-bold: 'DM Serif Display', serif; // (waga: 600)
-$f-accent-bold: 'DM Serif Display', serif; // (waga: bold/700)
+$f-accent: 'DM Serif Display', serif; 
 
 // Rozmiary czcionek
 $font-size-small: 14px; 
@@ -18,9 +10,16 @@ $font-size-medium: 16px;
 $font-size-semi-large: 18px; 
 $font-size-large: 20px; 
 
+$font-weight-semi-light: 300; 
+$font-weight-light: 400; 
+$font-weight-medium: 500;
+$font-weight-bold: 600; 
+$font-weight-extra-bold: 700; 
+
 
 $header-size-small: 16px; 
 $header-size-medium: 25px; 
 $header-size-semi-large: 33px;
 $header-size-large: 40px; 
 $header-size-extra-large: 50px; 
+

@@ -18,37 +18,37 @@
 @import '../welcome-carousel.scss';
 
 h1 {
-  font-family: $f-main-bold; 
+  font-family: $f-accent; 
   color: $c-accent; 
   font-size: $header-size-large; 
 }
 
 h2 {
-  font-family: $f-main-medium; 
+  font-family: $f-accent; 
   color: $c-accent; 
   font-size:$header-size-semi-large; 
 }
 
 h3 {
-  font-family: $f-main-bold; 
+  font-family: $f-accent; 
   color: $c-accent; 
   font-size: $header-size-medium; 
 }
 
 h4 {
-  font-family: $f-main-bold;
+  font-family: $f-accent;
   color: $c-accent; 
   font-size: $header-size-small; 
 }
 
 h5 {
-  font-family: $f-main-medium; 
+  font-family: $f-accent; 
   color: $c-accent; 
   font-size: $font-size-medium; 
 }
 
 p {
-  font-family: $f-main-medium;
+  font-family: $f-main;
   color: $c-primary; 
   font-size: $font-size-medium; 
 }
