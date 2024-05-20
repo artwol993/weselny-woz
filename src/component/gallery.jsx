@@ -52,61 +52,61 @@ function Gallery({ onSelectCar }) {
   };
 
   return (
-    <section id="gallery" className="container-gallery">
-      <h2> Wybierz auto</h2>
-      <p className="text-center h4">
+    <section id="gallery" className="gallery-section">
+      <h2 className="gallery-header"> Wybierz auto</h2>
+      <p className="text-center gallery-txt">
         Podane ceny są cenami orientacyjnymi, aby poznać dokładną cenę wypełnij
         formularz lub skontaktuj się z nami telefonicznie{" "}
       </p>
-      <br></br>
-      <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4">
-        {Cars.map((car) => (
-          <Col key={car.id}>
-            <motion.div
-              className="Card"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={containerVariants}
-              key={car.id}
-            >
-              <Card>
-                <Card.Img
-                  className="box-photo"
-                  variant="top"
-                  src={car.image}
-                  alt={car.name}
-                  onClick={() =>
-                    handleImageClick(
-                      car.image,
-                      car.gallery,
-                      car.name,
-                      car.year,
-                      car.engine
-                    )
-                  }
-                />
-                <Card.Body>
-                  <Card.Title>{car.name}</Card.Title>
-                  <Card.Text>Cena: {car.price}</Card.Text>
-                  <Card.Text>Rok produkcji: {car.year}</Card.Text>
-                  <Card.Text>Silnik: {car.engine}</Card.Text>
-                  <Button
-                    className="gallery-button"
-                    onClick={() => {
-                      handleSelectCar(car.name);
-                      scrollToContact();
-                    }}
-                  >
-                    Zarezerwuj
-                  </Button>
-                </Card.Body>
-              </Card>
-            </motion.div>
-          </Col>
-        ))}
-      </Row>
-
+      <div className="gallery-container">
+        <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4">
+          {Cars.map((car) => (
+            <Col key={car.id}>
+              <motion.div
+                className="Card"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={containerVariants}
+                key={car.id}
+              >
+                <Card>
+                  <Card.Img
+                    className="box-photo"
+                    variant="top"
+                    src={car.image}
+                    alt={car.name}
+                    onClick={() =>
+                      handleImageClick(
+                        car.image,
+                        car.gallery,
+                        car.name,
+                        car.year,
+                        car.engine
+                      )
+                    }
+                  />
+                  <Card.Body>
+                    <Card.Title>{car.name}</Card.Title>
+                    <Card.Text>Cena: {car.price}</Card.Text>
+                    <Card.Text>Rok produkcji: {car.year}</Card.Text>
+                    <Card.Text>Silnik: {car.engine}</Card.Text>
+                    <Button
+                      className="gallery-button"
+                      onClick={() => {
+                        handleSelectCar(car.name);
+                        scrollToContact();
+                      }}
+                    >
+                      Zarezerwuj
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </motion.div>
+            </Col>
+          ))}
+        </Row>
+      </div>
       <Modal show={showModal} onHide={() => setShowModal(false)} size="xl">
         <Modal.Body>
           <Carousel

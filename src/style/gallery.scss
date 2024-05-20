@@ -2,19 +2,37 @@
 @import './config/fonts';
 @import './config/breakpoints';
 
-.container-gallery {
+
+.gallery-section {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-container {
   margin-top: 35px;
   padding-inline: 50px;
+}
 
-  .box-photo:hover {
-    cursor: pointer;
-    opacity: 0.5;
-  }
+.gallery-header {
+  text-align: center;
+}
 
-  .gallery-button {
-    background: $c-theme !important;
-    margin-top: 3px;
-  }
+.gallery-txt {
+  width: 350px;
+  font-weight: $weight-light;
+}
+
+.box-photo:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.gallery-button {
+  background: $c-theme !important;
+  margin-top: 3px;
 }
 
 .card-body-txt {
@@ -27,6 +45,8 @@
   align-items: center;
 }
 
+//modal
+
 .modal-content {
   height: 85vh;
   display: flex;
@@ -34,15 +54,15 @@
   justify-content: space-around;
 }
 
+.modal-body {
+  overflow-y: auto;
+}
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   background: #0144a3;
   padding: 15px;
   border-radius: 50px;
-}
-
-.modal-body {
-  overflow-y: auto;
 }
 
 .modal-text {
@@ -70,7 +90,25 @@
 
 
 @include for-tablet-up {
+
+  .gallery-section {
+    padding-top: 100px;
+  }
+
   .modal-content {
     height: 95vh;
+  }
+
+  .gallery-txt {
+    width: 500px;
+    font-weight: $weight-light;
+  }
+}
+
+@include for-desktop-up {
+  .gallery-txt {
+    width: 700px;
+    font-weight: $weight-light;
+    font-size: $font-size-semi-large;
   }
 }

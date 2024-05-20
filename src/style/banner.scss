@@ -1,5 +1,6 @@
-$mobile-breakpoint: 768px;
-$font-color-light: #ffff;
+@import './config/colors';
+@import './config/fonts';
+@import './config/breakpoints';
 
 .banner-container {
   height: 120px;
@@ -28,20 +29,24 @@ $font-color-light: #ffff;
 }
 
 .banner-p {
-  color: $font-color-light;
-  font-size: 2.5em;
+  font-family: $f-accent;
+  color: $c-white;
+  font-size: 1.5em;
   margin-right: 0.2em;
   animation: stretch 2s ease-out infinite alternate;
   text-align: center;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: 1.5em;
-    margin: 1rem 0;
-  }
 }
 
 @keyframes stretch {
   0% {
     transform: scale(1.1);
+  }
+}
+
+
+@include for-tablet-up {
+  .banner-p {
+    font-size: 2.5em;
+    margin: 1rem 0;
   }
 }
