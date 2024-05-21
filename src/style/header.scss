@@ -4,28 +4,35 @@
 
 .header-section {
   position: fixed;
-  top: -100%;
+  top: 0;
   width: 100%;
-  transition: top 0.3s ease-in-out; 
+  transition: top 0.3s ease-in-out;
   z-index: 1000;
 }
 
 .h-container {
-  height: 100px;
   background: $c-theme;
   color: $c-white;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
 }
 
-.hamburger {
+.logo-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hamburger {
+  display: none;
   cursor: pointer;
   flex-direction: column;
   justify-content: space-around;
@@ -34,7 +41,6 @@
   background: transparent;
   border: none;
   z-index: 10;
- 
 
   .hamburger-bar {
     width: 100%;
@@ -45,7 +51,7 @@
 }
 
 .hamburger.active .hamburger-bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg); 
+  transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active .hamburger-bar:nth-child(2) {
@@ -56,7 +62,6 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-// Styl dla mobilnego menu, które jest wysuwane
 .mobile-nav {
   display: none;
   position: fixed;
@@ -73,6 +78,7 @@
 }
 
 .h-c-list {
+  font-family: $f-accent;
   font-size: 18px;
   padding: 15px;
   box-sizing: border-box;
@@ -85,14 +91,26 @@
 }
 
 @include for-mobile {
-  .hamburger {
-    display: flex;
+  .h-container {
+    height: 70px;
   }
 
-  .h-container {
-    justify-content: space-between;
-    padding: 0 20px;
-  
+  .logo-container {
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 20px;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .desktop-logo {
+    display: none;
   }
 
   .mobile-nav {
@@ -105,14 +123,26 @@
 }
 
 @include for-tablet {
-  .hamburger {
-    display: flex;
+  .h-container {
+    height: 70px;
   }
 
-  .h-container {
-    justify-content: space-between;
-    padding: 0 20px;
-  
+  .logo-container {
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 20px;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .desktop-logo {
+    display: none;
   }
 
   .mobile-nav {
@@ -124,21 +154,36 @@
   }
 }
 
-
 @include for-desktop {
+  .h-container {
+    height: 100px;
+  }
+
+  .logo-container {
+    justify-content: space-between;
+  }
+
   .hamburger {
-    display: none; 
+    display: none;
+  }
+
+  .mobile-logo {
+    display: none;
+  }
+
+  .desktop-logo {
+    display: block;
   }
 
   .desktop-nav {
-    display: flex; 
-    justify-content: center;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
   }
 
   .desktop-nav .h-c-list {
-    display: block; 
+    display: block;
 
     &:hover {
       color: $c-accent;
@@ -146,28 +191,25 @@
   }
 
   .h-c-list a {
-    color: $c-white; 
-    text-decoration: none; 
-    padding: 5px 0; 
-    position: relative; 
-    display: inline-block; 
-  
+    color: $c-white;
+    text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+    display: inline-block;
+
     &::after {
       content: "";
       position: absolute;
-      bottom: 0; 
-      left: 0; 
-      width: 0; 
-      height: 2px; 
-      color: $c-accent;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
       background-color: $c-accent;
-      transition: width 0.3s linear; 
+      transition: width 0.3s;
     }
-  
-    &:hover::after, &:focus::after {
-      color: $c-accent;
-      width: 100%; 
+
+    &:hover::after {
+      width: 100%;
     }
   }
 }
-

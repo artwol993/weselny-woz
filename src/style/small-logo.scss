@@ -1,24 +1,20 @@
-$font-family-default: 'DM Serif Display', serif;
-$text-color: #FFFFFF;
-$box-width: 100px;
-$box-height: 45px;
-$icon-height: 55px;
-$title-font-size: 15px;
+@import './config/colors';
+@import './config/breakpoints';
+@import './config/fonts';
 
 .box-sm {
-  width: $box-width;
-  height: $box-height;
+  width: 150px;
+  height: 60px;
   padding: 5px;
-  margin-bottom: 10px;
 
   .logo-icon-sm {
-    height: $icon-height;
+    height: 45px;
   }
 
   .logo-tittle-sm {
-    color: $text-color;
-    font-size: $title-font-size;
-    font-family: $font-family-default;
+    color: $c-white;
+    font-size: $font-size-small;
+    font-family: $f-accent;
   }
 }
 

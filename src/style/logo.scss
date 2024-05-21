@@ -1,12 +1,10 @@
-$font-family-default: 'DM Serif Display', serif;
-
 @import './config/colors';
 @import './config/breakpoints';
 @import './config/fonts';
 
 .box {
-  width: 130px;
-  height: 70px;
+  width: 200px;
+  height: 80px;
   padding: 5px;
 }
 
@@ -27,16 +25,3 @@ $font-family-default: 'DM Serif Display', serif;
 }
 
 
-@include for-tablet-up {
-  .box { 
-    height: 110px;
-  }
-
-  .logo-icon {
-    height: 100px;
-  }
-
-  .logo-tittle {
-    font-size: 25px;
-  }
-}
