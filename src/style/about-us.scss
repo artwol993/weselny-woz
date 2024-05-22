@@ -4,7 +4,7 @@
 
 
 .container-about-us {
-  margin: 30px;
+  padding-block: 70px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -32,6 +32,10 @@
 }
 
 @include for-desktop {
+  .container-about-us {
+    padding-top: 100px;
+  }
+
   .about-us-box {
     width: 900px;
   }
