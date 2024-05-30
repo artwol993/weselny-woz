@@ -1,5 +1,4 @@
 import React from "react";
-
 import { motion } from "framer-motion";
 import "../style/about-us.scss";
 
@@ -24,13 +23,7 @@ function AboutUs() {
           variants={containerVariants}
         >
           <p className="about-us-txt">
-            W naszej firmie "Weselny Wóz" jesteśmy przekonani, że droga, która
-            prowadzi do uroczystości ślubnej, jest nie mniej ważna niż sam ślub.
-            Dlatego już od 2023 roku nie tylko dostarczamy luksusowe środki
-            transportu, ale przede wszystkim kreujemy niezapomniane wspomnienia.
-            Nasza pasja i oddanie temu, co robimy, przyczyniły się do zdobywania
-            serc wielu par młodych w okolicach Łukowa (Lubelskie), oraz w takich
-            miastach jak Warszawa, Lublin czy Białystok.
+            W firmie "Weselny Wóz" jesteśmy przekonani, że droga do uroczystości ślubnej jest równie ważna, jak sam ślub. Od 2023 roku dostarczamy luksusowe środki transportu, tworząc niezapomniane wspomnienia. Nasza pasja do perfekcji zdobyła serca wielu par młodych w Łukowie, Warszawie, Lublinie i Białymstoku.
           </p>
         </motion.div>
         <motion.div
@@ -41,13 +34,7 @@ function AboutUs() {
           variants={containerVariants}
         >
           <p className="about-us-txt">
-            W naszej firmie "Weselny Wóz" jesteśmy przekonani, że droga, która
-            prowadzi do uroczystości ślubnej, jest nie mniej ważna niż sam ślub.
-            Dlatego już od 2023 roku nie tylko dostarczamy luksusowe środki
-            transportu, ale przede wszystkim kreujemy niezapomniane wspomnienia.
-            Nasza pasja i oddanie temu, co robimy, przyczyniły się do zdobywania
-            serc wielu par młodych w okolicach Łukowa (Lubelskie), oraz w takich
-            miastach jak Warszawa, Lublin czy Białystok.
+            Nasza misja to nie tylko zapewnienie transportu, ale także gwarancja wyjątkowości, elegancji i niezawodności. Profesjonalny zespół firmy "Weselny Wóz" zawsze spełnia oczekiwania nawet najbardziej wymagających klientów, dbając o każdy szczegół.
           </p>
         </motion.div>
         <motion.div
@@ -58,11 +45,7 @@ function AboutUs() {
           variants={containerVariants}
         >
           <p className="about-us-txt">
-            Nasza misja to nie tylko zapewnienie transportu - to gwarancja
-            wyjątkowości, elegancji oraz niezawodności w każdym calu.
-            Profesjonalny zespół firmy "Weselny Wóz" jest zawsze gotowy sprostać
-            oczekiwaniom nawet najbardziej wymagających klientów, dbając o
-            każdy, nawet najdrobniejszy detal.
+            Oferujemy eleganckie samochody ślubne, idealne na Twój wielki dzień. Nasz doświadczony zespół zapewnia najwyższy poziom obsługi, dbając o każdy detal. Dostosowujemy dekoracje samochodów do Twoich potrzeb i preferencji.
           </p>
         </motion.div>
         <motion.div
@@ -73,9 +56,7 @@ function AboutUs() {
           variants={containerVariants}
         >
           <p className="about-us-txt">
-            Wybierając nas, wybierasz nie tylko luksusowy środek transportu, ale
-            przede wszystkim pewność, że każdy moment spędzony z nami stanie się
-            wyjątkowym wspomnieniem.
+            Chcesz uczynić swój ślub jeszcze bardziej wyjątkowym? Skontaktuj się z nami i dowiedz się więcej o naszych usługach wynajmu samochodów na ślub w Łukowie, Warszawie, Lublinie i Białymstoku. Wybierając nas, wybierasz luksusowy środek transportu oraz pewność, że każdy moment spędzony z nami stanie się wyjątkowym wspomnieniem.
           </p>
         </motion.div>
       </div>

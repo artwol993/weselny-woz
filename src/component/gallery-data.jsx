@@ -62,15 +62,15 @@ const Cars = [
     year: "2022",
     engine: "4.0 TFSI 600hp",
   },
-  {
-    id: 6,
-    image: "images/gle-1.jpg",
-    name: "Mercedes GLE Coupe",
-    price: "1600pln",
-    gallery: ["images/gle-2.jpg", "images/gle-3.jpg", "images/gle-4.jpg"],
-    year: "2020",
-    engine: "4.0 350d 330hp",
-  },
+  // {
+  //   id: 6,
+  //   image: "",
+  //   name: "BMW X5",
+  //   price: "1600pln",
+  //   gallery: [],
+  //   year: "2020",
+  //   engine: "",
+  // },
 ];
 
 export default Cars;
