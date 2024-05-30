@@ -11,29 +11,40 @@ $circle-size: 150px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-block: 70px;
+}
 
-  .box-circle {
-    width: $circle-size;
-    height: $circle-size;
-    background-color:#ffffffd8;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+.box-circle {
+  width: $circle-size;
+  height: $circle-size;
+  background-color:#ffffffd8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
-  }
+.quality-icon {
+  width: $circle-size;
+  height: $circle-size;
+}
 
-  .quality-icon {
-    width: $circle-size;
-    height: $circle-size;
-  }
+.tittle {
+  color: $c-accent;
+}
 
-  .tittle {
-    color: $c-accent;
-  }
-
+@include for-mobile {
   .card-text {
     color: $c-white;
+    width: 360px;
+    padding-bottom: 20px
   };
+}
+
+
+@include for-tablet-up {
+  .card-text {
+    color: $c-white;
+  }
 }

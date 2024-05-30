@@ -39,9 +39,9 @@ function Quality() {
   };
 
   return (
-    <section id="quality" className="quality-container p-5">
+    <section id="quality" className="quality-container">
       <Container>
-        <Row className="text-center g-4">
+        <Row className="text-center g-3">
           <Col md>
             <motion.div
               className=" text-white adv-card"

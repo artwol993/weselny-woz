@@ -11,40 +11,40 @@ function Footer() {
     <>
       <section className="footer" id="footer">
         <Container fluid>
-          <p className="h1 mb-5">Skontaktuj się z nami</p>
-          <Row>
+          <h2 className="h1 mb-4">Skontaktuj się z nami</h2>
+          <Container className="footer-container-contact">
             <Col>
-              <Row>
+              <Row className="mb-2">
                 <a href="tel:+48502992600" className="footer-link">
                   <span className="footer-phone">502 992 600</span>
                 </a>
               </Row>
-              <Row>
+              <Row className="mb-2">
                 <a href="tel:+48515212284" className="footer-link">
                   <span className="footer-phone">515 212 284</span>
                 </a>
               </Row>
             </Col>
-            <Col>
+            <Col className="mb-2">
               <a href="mailto:biuro@weselny-woz.pl" className="footer-link">
                 <span className="footer-email"> biuro@weselny-woz.pl</span>{" "}
               </a>
             </Col>
-          </Row>
+          </Container>
           <Row>
             <Container>
               <div className="footer-social">
                 <a
-                  href="https://www.instagram.com/weselnywoz/"
                   className="footer-social-link"
+                  href="https://www.instagram.com/weselnywoz/"
                 >
-                  <Instagram />{" "}
+                  <Instagram />
                 </a>
                 <a
-                  href="https://www.facebook.com"
                   className="footer-social-link"
+                  href="https://www.facebook.com"
                 >
-                  <Facebook />{" "}
+                  <Facebook />
                 </a>
               </div>
             </Container>

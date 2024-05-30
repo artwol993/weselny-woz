@@ -1,61 +1,51 @@
-$footer-background: linear-gradient(to right, #012f70, #011a3d, #0144a3);
-$text-color-light: #FFEAEA;
-$link-color: white;
-$link-hover-color: gold;
-$mobile-breakpoint: 576px;
+@import './config/colors';
+@import './config/fonts';
+@import './config/breakpoints';
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: $text-color-light;
-  background: $footer-background;
-  padding: 1em;
+  color: $c-white;
+  background: $c-theme;
+  padding: 2em;
 
-  a {
+  .footer-social {
+    padding-top: 10px;
+
+    .footer-social-link {
+      color: #011a3d;
+    }
+  }
+
+  .footer-link {
     text-decoration: none;
-    color: $link-color;
+    color: $c-white;
+    font-size: $font-size-semi-large;
+  }
+}
 
-    &:hover {
-      text-decoration: none;
-      color: $link-hover-color;
+@include for-tablet-up {
+  .footer {
+    .footer-container-contact {
+      display: flex;
+      flex-direction: row;
     }
 
-    &.footer-link {
-      margin: 3px;
-      font-size: 23px;
-
-      &:hover {
-        color: $link-hover-color;
-      }
-    }
-
-    &.footer-social-link {
-      font-size: 3em;
-
-      &:hover {
-        filter: blur(1px);
-      }
-    }
-  }
-
-  .phone-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .footer-phone {
-    margin-left: 25px;
-  }
-
-  @media (max-width: $mobile-breakpoint) {
     .footer-link {
-      font-size: 16px;
+      font-size: $font-size-large;
+      &:hover {
+        text-decoration: none;
+        color: $c-accent;
+      }
     }
 
     .footer-social-link {
-      font-size: 2em;
+      margin: 10px;
+      &:hover {
+        filter: blur(1px);
+      }
     }
   }
 }

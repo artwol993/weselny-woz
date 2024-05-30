@@ -1,21 +1,21 @@
-$primary-gradient: linear-gradient(to right, #012f70, #011a3d, #0144a3);
-$font-family-default: 'DM Serif Display';
-$mobile-breakpoint: 992px; // Adjust based on your design
+@import './config/colors';
+@import './config/fonts';
+@import './config/breakpoints';
 
-.container-contact {
+.contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: $font-family-default;
+
 }
 
-h2 {
+.contact-header {
   text-align: center;
   padding-bottom: 25px;
 }
 
 .contact-button {
-  background: $primary-gradient !important;
+  background: $c-theme !important;
 }
 
 .contact-modal {
@@ -27,24 +27,29 @@ h2 {
   .email-sended-icon {
     width: 420px;
     margin: 20px;
-
-    @media only screen and (max-width: $mobile-breakpoint) {
-      width: 300px;
-    }
   }
 
   .contact-modal-txt {
     font-size: 30px;
     text-align: center;
-
-    @media only screen and (max-width: $mobile-breakpoint) {
-      font-size: 20px;
-    }
   }
 }
 
-@media only screen and (min-width: $mobile-breakpoint) {
-  .container-form {
+@include for-tablet-up {
+  .contact-modal {
+    .email-sended-icon {
+      width: 300px;
+    }
+
+    .contact-modal-txt {
+      font-size: 20px;
+    }
+  }
+  .contact-form {
     width: 700px !important;
+  }
+
+  .form-callendar {
+    background-color: red;
   }
 }

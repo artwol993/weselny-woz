@@ -1,15 +1,11 @@
-$font-family-default: 'DM Serif Display', serif;
-$text-color-light: #FFFFFF;
-$mobile-breakpoint: 576px;
+@import './config/colors';
+@import './config/breakpoints';
+@import './config/fonts';
 
 .box {
-  width: 130px;
-  height: 110px;
+  width: 200px;
+  height: 80px;
   padding: 5px;
-
-  @media only screen and (max-width: $mobile-breakpoint) {
-    height: 70px;
-  }
 }
 
 .logo {
@@ -19,19 +15,13 @@ $mobile-breakpoint: 576px;
 }
 
 .logo-icon {
-  height: 100px;
-
-  @media only screen and (max-width: $mobile-breakpoint) {
-    height: 75px;
-  }
+  height: 75px;
 }
 
 .logo-tittle {
-  color: $text-color-light;
-  font-size: 25px;
-  font-family: $font-family-default;
-
-  @media only screen and (max-width: $mobile-breakpoint) {
-    font-size: 20px;
-  }
+  color: $c-white;
+  font-size: 20px;
+  font-family: $f-accent;
 }
+
+

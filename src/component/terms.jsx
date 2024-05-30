@@ -23,7 +23,7 @@ function Terms() {
   };
 
   return (
-    <section id="terms" className="terms-container p-5">
+    <section id="terms" className="terms-container">
       <Container>
         <h2 className="terms-title text-center mb-2">
           Podstawowe warunki usługi
