@@ -5,16 +5,8 @@ import Container from "react-bootstrap/Container";
 import { motion } from "framer-motion";
 
 function Terms() {
-  const itemVariantsLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.8, ease: "easeInOut" },
-    },
-  };
-  const itemVariantsRight = {
-    hidden: { opacity: 0, x: 50 },
+  const itemVariants = {
+    hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       x: 0,
@@ -30,7 +22,7 @@ function Terms() {
         </h2>
         <motion.div
           className="terms-item"
-          variants={itemVariantsLeft}
+          variants={itemVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -40,7 +32,7 @@ function Terms() {
         </motion.div>
         <motion.div
           className="terms-item"
-          variants={itemVariantsRight}
+          variants={itemVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -50,7 +42,7 @@ function Terms() {
         </motion.div>
         <motion.div
           className="terms-item"
-          variants={itemVariantsLeft}
+          variants={itemVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -63,7 +55,7 @@ function Terms() {
         </motion.div>
         <motion.div
           className="terms-item"
-          variants={itemVariantsRight}
+          variants={itemVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -73,7 +65,7 @@ function Terms() {
         </motion.div>
         <motion.div
           className="terms-item"
-          variants={itemVariantsLeft}
+          variants={itemVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

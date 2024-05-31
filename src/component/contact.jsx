@@ -89,7 +89,7 @@ function Contact({ selectedCar, onCarSelect }) {
                         onChange={handleCarSelect}
                         name="car"
                       >
-                        <option value="">Wybierz auto...</option>
+                        <option value="">Wybierz auto</option>
                         {Cars.map((car) => (
                           <option key={car.id} value={car.name}>
                             {car.name}
