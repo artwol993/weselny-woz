@@ -5,7 +5,6 @@
 
 $circle-size: 150px;
 
-
 .quality-container {
   background-image: url("../assets/qualityTheme.jpg");
   background-repeat: no-repeat;
@@ -30,21 +29,12 @@ $circle-size: 150px;
   height: $circle-size;
 }
 
-.tittle {
+.quality-tittle {
   color: $c-accent;
 }
 
-@include for-mobile {
-  .card-text {
-    color: $c-white;
-    width: 360px;
-    padding-bottom: 20px
-  };
-}
-
-
-@include for-tablet-up {
-  .card-text {
-    color: $c-white;
-  }
-}
+.quality-text {
+  color: $c-white;
+  width: 360px;
+  padding-bottom: 20px
+};

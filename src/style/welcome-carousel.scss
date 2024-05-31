@@ -3,26 +3,7 @@ $tablet-up-padding: 5%;
 $large-screen-padding: 9%;
 $xlarge-screen-padding: 15%;
 
-@media only screen and (min-width: 992px) {
-  .carousel-inner {
-    padding-left: $tablet-up-padding !important;
-    padding-right: $tablet-up-padding !important;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .carousel-inner {
-    padding-left: $large-screen-padding !important;
-    padding-right: $large-screen-padding !important;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .carousel-inner {
-    padding-left: $xlarge-screen-padding !important;
-    padding-right: $xlarge-screen-padding !important;
-  }
-}
+@import './config/breakpoints';
 
 .wc-image {
   width: auto;
@@ -32,3 +13,20 @@ $xlarge-screen-padding: 15%;
 .carousel-control-next:hover {
   background-color: $hover-bg-color !important;
 }
+
+
+@include for-tablet-up {  .carousel-inner {
+  padding-left: $tablet-up-padding !important;
+  padding-right: $tablet-up-padding !important;
+}}
+
+@include for-desktop {  .carousel-inner {
+  padding-left: $large-screen-padding !important;
+  padding-right: $large-screen-padding !important;
+}}
+
+@include for-wide-desktop {  .carousel-inner {
+  padding-left: $xlarge-screen-padding !important;
+  padding-right: $xlarge-screen-padding !important;
+}}
+

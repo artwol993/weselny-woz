@@ -54,10 +54,10 @@ function Quality() {
                 <div className="mb-2 box-circle">
                   <img className="quality-icon" src={qualityCar} alt="dos" />
                 </div>
-                <Card.Title className=" mb-3">
+                <Card.Title className="quality-title mb-3">
                   Luksus na każdą okazję
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="quality-text">
                   Wybieraj spośród szerokiej gamy pojazdów, od klasycznych
                   modeli po najnowsze limuzyny. Każdy samochód jest gwarancją
                   komfortu i elegancji, idealnie wpisując się w wyjątkowy
@@ -78,8 +78,10 @@ function Quality() {
                 <div className="mb-2 box-circle">
                   <img className="quality-icon" src={qualityTeam} alt="dos" />
                 </div>
-                <Card.Title className=" mb-3">Zespół pełen pasji</Card.Title>
-                <Card.Text>
+                <Card.Title className="quality-title mb-3">
+                  Zespół pełen pasji
+                </Card.Title>
+                <Card.Text className="quality-text">
                   Choć nasza firma powstała w 2023 roku, nasi kierowcy i zespół
                   mają lata doświadczenia w branży samochodowej. Dbamy o każdy
                   detal, by Twój wyjątkowy dzień był doskonały. Z nami możesz
@@ -105,10 +107,10 @@ function Quality() {
                     alt="dos"
                   />
                 </div>
-                <Card.Title className=" mb-3">
+                <Card.Title className="quality-title mb-3">
                   Perfekcja w każdym szczególe
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="quality-text">
                   Od momentu rezerwacji aż po zakończenie usługi, dbamy o
                   najwyższe standardy jakości. Nasza flota składa się z
                   najlepiej utrzymanych luksusowych samochodów, a nasi kierowcy

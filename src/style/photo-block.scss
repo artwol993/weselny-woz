@@ -1,6 +1,6 @@
-$background-attachment-style: fixed;
-$block-height: 700px;
-$margin-top-size: 30px;
+@import './config/colors';
+@import './config/fonts';
+@import './config/breakpoints';
 
 #photo-block {
   .container-photo-block {
@@ -8,9 +8,9 @@ $margin-top-size: 30px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: $background-attachment-style;
+    background-attachment: fixed;
     width: auto;
-    height: $block-height;
-    margin-top: $margin-top-size;
+    height: 700px;
+    margin-top: 30px;
   }
 }
