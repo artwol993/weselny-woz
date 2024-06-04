@@ -10,7 +10,7 @@
 
 .contact-header {
   text-align: center;
-  margin-top: 110px;
+  margin-top: 85px;
   padding-bottom: 25px;
 }
 
@@ -35,6 +35,12 @@
   }
 }
 
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
 @include for-tablet-up {
   .contact-modal {
     .email-sended-icon {
@@ -45,7 +51,18 @@
       font-size: 20px;
     }
   }
+
   .contact-form {
     width: 700px !important;
   }
+}
+
+@include for-desktop-up {
+  .contact-header {
+    margin-top: 105px;
+  }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
 }
