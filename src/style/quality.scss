@@ -38,3 +38,22 @@ $circle-size: 150px;
   width: 360px;
   padding-bottom: 20px
 };
+
+@include for-tablet { 
+  .quality-container {
+    padding-block: 120px;
+    padding-inline: 100px;
+  }
+
+  .quality-text {
+    width: 350px;
+    margin: 20px;
+  }
+}
+
+@include for-desktop-up {
+  .quality-text {
+    width: 300px;
+  }
+ }
+
