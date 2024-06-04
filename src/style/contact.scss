@@ -18,6 +18,10 @@
   background: $c-theme !important;
 }
 
+.contact-button:hover {
+  color: $c-accent;
+}
+
 .contact-modal {
   display: flex;
   flex-direction: column;
