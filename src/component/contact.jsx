@@ -82,32 +82,34 @@ function Contact({ selectedCar, onCarSelect }) {
                 >
                   <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridState">
-                      <FloatingLabel>Auto</FloatingLabel>
-                      <Form.Select
-                        {...register("car", { required: "Wybierz auto" })}
-                        value={selectedCar || " "}
-                        onChange={handleCarSelect}
-                        name="car"
-                      >
-                        <option value="">Wybierz auto</option>
-                        {Cars.map((car) => (
-                          <option key={car.id} value={car.name}>
-                            {car.name}
-                          </option>
-                        ))}
-                      </Form.Select>
+                      <FloatingLabel controlId="city" label="Wybierz auto">
+                        <Form.Select
+                          label="Wybierz Auto"
+                          {...register("car", { required: "Wybierz auto" })}
+                          value={selectedCar || " "}
+                          onChange={handleCarSelect}
+                          name="car"
+                        >
+                          {Cars.map((car) => (
+                            <option key={car.id} value={car.name}>
+                              {car.name}
+                            </option>
+                          ))}
+                        </Form.Select>
+                      </FloatingLabel>
                       {errors.car && <p>{errors.car.message}</p>}
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridState">
-                      <FloatingLabel>Termin</FloatingLabel>
-                      <Form.Control
-                        type="date"
-                        name="date"
-                        min={new Date().toISOString().split("T")[0]}
-                        {...register("date", { required: "Podaj datę" })}
-                      />
-                      {errors.date && <p>{errors.date.message}</p>}
+                      <FloatingLabel controlId="city" label="Wybierz datę">
+                        <Form.Control
+                          type="date"
+                          name="date"
+                          min={new Date().toISOString().split("T")[0]}
+                          {...register("date", { required: "Podaj datę" })}
+                        />
+                        {errors.date && <p>{errors.date.message}</p>}
+                      </FloatingLabel>
                     </Form.Group>
                   </Row>
                   <Row className="mb-3">
