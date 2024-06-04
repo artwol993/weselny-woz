@@ -16,7 +16,7 @@ function Body() {
     setSelectedCar(carName);
   };
   return (
-    <div>
+    <>
       <WelcomeCarousel />
       <AboutUs />
       <Banner />
@@ -26,7 +26,7 @@ function Body() {
       <Gallery onSelectCar={setSelectedCar} />
       <PhotoBlock />
       <Contact selectedCar={selectedCar} onCarSelect={handleCarSelect} />{" "}
-    </div>
+    </>
   );
 }
 
