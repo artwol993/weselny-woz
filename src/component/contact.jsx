@@ -10,7 +10,7 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Cars from "./gallery-data";
-import emailSended from "../assets/emailSended.jpg";
+import emailSended from "../assets/emailSended.avif";
 import { motion } from "framer-motion";
 
 function Contact({ selectedCar, onCarSelect }) {

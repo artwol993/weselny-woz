@@ -2,7 +2,7 @@ import React from "react";
 import "../style/logo.scss";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
-import weselnyWozIcon from "../assets/weselnyWozIcon.png";
+import weselnyWozIcon from "../assets/weselnyWozIcon.avif";
 
 function Logo() {
   return (

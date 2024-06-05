@@ -1,8 +1,8 @@
 import React from "react";
 import "../style/quality.scss";
-import qualityCar from "../assets/qualityCar.png";
-import qualityTeam from "../assets/qualityTeam.png";
-import qualityProffesional from "../assets/qualityProffesional.png";
+import qualityCar from "../assets/qualityCar.avif";
+import qualityTeam from "../assets/qualityTeam.avif";
+import qualityProffesional from "../assets/qualityProffesional.avif";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
