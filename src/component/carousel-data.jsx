@@ -1,17 +1,17 @@
 const WelcomeCars = [
   {
     id: 1,
-    image: "images/car1.1.avif",
+    image: "images/wc1.avif",
     name: "car1",
   },
   {
     id: 2,
-    image: "images/car1.2.avif",
+    image: "images/wc2.avif",
     name: "car2",
   },
   {
     id: 3,
-    image: "images/car1.3.avif",
+    image: "images/wc3.avif",
     name: "car3",
   },
 ];
